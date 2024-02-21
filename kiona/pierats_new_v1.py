@@ -10,7 +10,7 @@ st.set_page_config(
 
 # Set up sidebar
 action = st.sidebar.radio("Hey sailor! What do you want to do?", ("Welcome",
-                                                                  "First Quest"
+                                                                  "First Quest",
                                                                   "Second Quest",
                                                                   "Third Quest",
                                                                   "Home",

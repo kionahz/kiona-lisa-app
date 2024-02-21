@@ -10,11 +10,11 @@ st.set_page_config(
 
 # Set up sidebar
 action = st.sidebar.radio("Hey sailor! What do you want to do?", ("Welcome",
-                                                                  "First Quest",
-                                                                  "Second Quest",
-                                                                  "Third Quest",
-                                                                  "Home",
-                                                                  "Backpack"))
+                                                                  "First Quest 🏳️",
+                                                                  "Second Quest 🔒",
+                                                                  "Third Quest 🔒",
+                                                                  "Home 🏠",
+                                                                  "Backpack "))
 st.sidebar.image("../pictures/turtle.png")
 sidebar_color()
 

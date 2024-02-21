@@ -12,9 +12,9 @@ st.set_page_config(
 
 # Set up main page
 col1, col2 = st.columns((6, 1))
-col1.title("PIErats - Productivity Island Expedition")
-col2.image("AD_Pictures/logo.png", width=120)
-st.sidebar.image("AD_Pictures/turtle.png")
+col1.title("pierats - Productivity Island Expedition", font= )
+col2.image("../pictures/logo.png", width=120)
+st.sidebar.image("../pictures/turtle.png")
 action = st.sidebar.radio("What action would you like to take?", ("Initial Deployment 🐻‍❄",
                                                                   "Add Add'l Consumer 🐧️",
                                                                   "Add Add'l Provider ☃️",

@@ -1,13 +1,10 @@
 import streamlit as st
 
 
-# change background color of the sidebar and the background
-def background_colors():
+# change background color of the sidebar
+def sidebar_color():
     st.markdown("""
     <style>
-        .stApp {
-                background-color: #132b3a;
-            }
         [data-testid=stSidebar] {
             background-color: #29bdbc;
         }

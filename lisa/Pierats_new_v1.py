@@ -1,5 +1,5 @@
 import streamlit as st
-from helpers import background_colors
+from helpers import sidebar_color
 
 st.set_page_config(
     page_title="PIERATS - Productivity Island Expedition",
@@ -11,12 +11,12 @@ st.set_page_config(
 st.sidebar.image("../pictures/turtle.png")
 # Set up sidebar
 action = st.sidebar.radio("Hey sailor! What do you want to do?", ("Welcome",
-                                                                  "First Quest",
-                                                                  "Second Quest",
-                                                                  "Third Quest",
-                                                                  "Home",
-                                                                  "Backpack"))
-background_colors()
+                                                                  "First Quest 🏳️",
+                                                                  "Second Quest 🔒",
+                                                                  "Third Quest 🔒",
+                                                                  "Home 🏠",
+                                                                  "Backpack 🎒"))
+sidebar_color()
 
 
 # Update page based on sidebar selection

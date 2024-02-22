@@ -20,7 +20,10 @@ action = st.sidebar.radio("Hey sailor! What do you want to do?", ("Welcome",
                                                                   "Second Quest 🔒",
                                                                   "Third Quest 🔒",
                                                                   "Home 🏠",
-                                                                  "Backpack 🎒"))
+                                                                  "Backpack 🎒",
+                                                                  "Clear Sidebar"))
+
+
 sidebar_color()
 
 
@@ -36,6 +39,8 @@ if action == "Welcome":
                   "you will find new materials and learn new things in order to survive and ultimately escape from the "
                   "island. Let's get started and begin with the first quest!")
 
+
+
 elif action == "First Quest 🏳️":
     st.image("../pictures/em_empty.png")
 
@@ -44,3 +49,5 @@ elif action == "Backpack 🎒":
     col1.title("Your Backpack")
     col2.image("../pictures/backpack.png")
     st.image("../pictures/open_backpack.png")
+
+

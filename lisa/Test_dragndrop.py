@@ -1,5 +1,6 @@
-# First, import the elements you need
+# Import the necessary modules from Streamlit Elements
 from streamlit_elements import elements, mui, html
+import streamlit as st
 
 with elements("dashboard"):
 
@@ -11,25 +12,28 @@ with elements("dashboard"):
     # First, build a default layout for every element you want to include in your dashboard
 
     layout = [
-        # Parameters: element_identifier, x_pos, y_pos, width, height, [item properties...]
-        dashboard.Item("first_item", 1, 1, 2, 0.5, isResizable=False),
-        dashboard.Item("second_item", 1, 2, 2, 0.5, isResizable=False),
-        dashboard.Item("third_item", 1, 3, 2, 0.5, isResizable=False),
+        dashboard.Item("item1", 1, 1, 2, 0.5, isResizable=False),
+        dashboard.Item("item2", 1, 2, 2, 0.5, isResizable=False),
+        dashboard.Item("item3", 1, 3, 2, 0.5, isResizable=False),
+        dashboard.Item("item4", 1, 4, 2, 0.5, isResizable=False),
+        dashboard.Item("item5", 1, 5, 2, 0.5, isResizable=False),
+        dashboard.Item("item6", 3, 1, 2, 0.5, isResizable=False),
+        dashboard.Item("item7", 3, 2, 2, 0.5, isResizable=False),
+        dashboard.Item("item8", 3, 3, 2, 0.5, isResizable=False),
+        dashboard.Item("item9", 3, 4, 2, 0.5, isResizable=False),
+        dashboard.Item("item10", 3, 5, 2, 0.5, isResizable=False),
     ]
 
-    # Next, create a dashboard layout using the 'with' syntax. It takes the layout
-    # as first parameter, plus additional properties you can find in the GitHub links below.
-
-
-    # If you want to retrieve updated layout values as the user move or resize dashboard items,
-    # you can pass a callback to the onLayoutChange event parameter.
-
-    def handle_layout_change(updated_layout):
-        # You can save the layout in a file, or do anything you want with it.
-        # You can pass it back to dashboard.Grid() if you want to restore a saved layout.
-        print(updated_layout)
-
-    with dashboard.Grid(layout, onLayoutChange=handle_layout_change):
-        mui.Paper("Search for a container (for food or water)", key="first_item")
-        mui.Paper("Build a fire", key="second_item")
-        mui.Paper("Collect Shells", key="third_item")
+    # Create the dashboard layout using the dashboard.Grid component
+    with dashboard.Grid(layout):
+        # Create ten draggable elements with text content
+        mui.Paper("Search for a container (for food or water)", key="item1", style={"backgroundColor": "#452d20"})
+        mui.Paper("Item 2", key="item2", style={"backgroundColor": "#452d20"})
+        mui.Paper("Item 3", key="item3", style={"backgroundColor": "#452d20"})
+        mui.Paper("Item 4", key="item4", style={"backgroundColor": "#452d20"})
+        mui.Paper("Item 5", key="item5", style={"backgroundColor": "#452d20"})
+        mui.Paper("Item 6", key="item6", style={"backgroundColor": "#452d20"})
+        mui.Paper("Item 7", key="item7", style={"backgroundColor": "#452d20"})
+        mui.Paper("Item 8", key="item8", style={"backgroundColor": "#452d20"})
+        mui.Paper("Item 9", key="item9", style={"backgroundColor": "#452d20"})
+        mui.Paper("Item 10", key="item10", style={"backgroundColor": "#452d20"})

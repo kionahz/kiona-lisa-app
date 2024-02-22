@@ -5,7 +5,12 @@ st.set_page_config(
     page_title="PIERATS - Productivity Island Expedition",
     page_icon="🐢",
     layout="wide",
-    initial_sidebar_state="expanded"
+    initial_sidebar_state="expanded",
+    menu_items={
+            'Get Help': 'https://www.extremelycoolapp.com/help',
+            'Report a bug': "https://www.extremelycoolapp.com/bug",
+            'About': "# Kiona and Lisa's Game!"
+    }
 )
 
 st.sidebar.image("../pictures/turtle.png")
@@ -31,10 +36,10 @@ if action == "Welcome":
                   "you will find new materials and learn new things in order to survive and ultimately escape from the "
                   "island. Let's get started and begin with the first quest!")
 
-elif action == "First Quest":
+elif action == "First Quest 🏳️":
     st.image("../pictures/em_empty.png")
 
-elif action == "Backpack":
+elif action == "Backpack 🎒":
     col1, col2 = st.columns((5, 1))
     col1.title("Your Backpack")
     col2.image("../pictures/backpack.png")

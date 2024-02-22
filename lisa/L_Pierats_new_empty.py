@@ -17,8 +17,6 @@ st.set_page_config(
 
 
 
-
-
 with st.sidebar:
     st.sidebar.image("../pictures/turtle.png")
 

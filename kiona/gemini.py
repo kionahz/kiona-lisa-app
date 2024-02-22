@@ -51,18 +51,23 @@ action = setup_sidebar(current_quest)
 # Update page based on sidebar selection
 if action == "Home 🏠":
     open_welcome()
+    current_quest = 0
+    action = setup_sidebar(current_quest)
 
 elif action == "First Quest 🏳️":
     open_first_quest()
     current_quest = 1
+    action = setup_sidebar(current_quest)
 
 elif action == "Second Quest 🔒":
     open_second_quest()
     current_quest = 2
+    action = setup_sidebar(current_quest)
 
 
 elif action == "Backpack 🎒":
     open_backpack()
+    action = setup_sidebar(current_quest)
 
 # Update sidebar based on current quest progress after each action
 # action = setup_sidebar(current_quest)

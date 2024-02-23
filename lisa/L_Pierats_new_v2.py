@@ -15,7 +15,7 @@ st.set_page_config(
     }
 )
 
-st.sidebar.image("../pictures/turtle.png")
+st.sidebar.image("../pictures/shelly_ahoi.png")
 # Set up sidebar
 action = st.sidebar.radio("Hey sailor! What do you want to do?", ("Welcome",
                                                                   "First Quest 🏳️",

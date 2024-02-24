@@ -5,10 +5,9 @@ from second_quest import open_second_quest
 from first_quest import open_first_quest
 from backpack import open_backpack
 
-
 # Define a variable to keep track of the current quest progress
-current_quest = 0
-action = "Home "
+current_quest = 1
+action = "First Quest "
 
 sidebar_options = {
     0: ["Home ", "First Quest ", "Backpack "],
@@ -20,7 +19,7 @@ sidebar_options = {
 
 # Function to set up the sidebar based on the current quest progress
 def setup_sidebar(current_quest):
-
+    # st.markdown(action)
     # action_widgets = st.sidebar.radio()
     # action_widget = action_widgets.get(f"sidebar_radio_{current_quest}")
     # if action_widget:
@@ -40,19 +39,17 @@ def setup_sidebar(current_quest):
     return following_action
 
 
-
 st.set_page_config(
     page_title="PIERATS - Productivity Island Expedition",
     page_icon="🐢",
     layout="wide",
     initial_sidebar_state="expanded",
     menu_items={
-            'Get Help': 'https://www.extremelycoolapp.com/help',
-            'Report a bug': "https://www.extremelycoolapp.com/bug",
-            'About': "# Kiona and Lisa's Game!"
+        'Get Help': 'https://www.extremelycoolapp.com/help',
+        'Report a bug': "https://www.extremelycoolapp.com/bug",
+        'About': "# Kiona and Lisa's Game!"
     }
 )
-
 
 st.sidebar.image("../pictures/turtle.png")
 
@@ -74,6 +71,7 @@ elif action == "First Quest ":
     action = setup_sidebar(current_quest)
 
 elif action == "Second Quest ":
+    open_first_quest()  # change to second quest
     current_quest = 2
     st.sidebar.empty()
     setup_sidebar(current_quest)
@@ -83,5 +81,3 @@ elif action == "Backpack ":
     current_quest = 4
     st.sidebar.empty()
     setup_sidebar(current_quest)
-
-

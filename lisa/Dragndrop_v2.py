@@ -1,29 +1,43 @@
 import streamlit as st
+tasks = ["Search for a container (for food or water)", "Build a fire", "Build Shelter", "Collect Shells",
+         "Collect Wood", "Watch the Sunset", "Search for drinking water", "Search for Food", "Build a Weapon",
+         "Explore the surroundings"]
 
-# Define the options for the multiselects
-options = ["Option 1", "Option 2", "Option 3", "Option 4"]
+sel_urgent_important, sel_noturgent_important = st.columns(2)
+sel_urgent_notimportant, sel_noturgent_notimportant = st.columns(2)
 
-# Create a session state to store the selected options
-session_state = st.session_state
+with sel_urgent_important:
+    st.subheader("Urgent/Important")
 
-# Initialize the selected options if they don't exist in the session state
-if "selected_options" not in session_state:
-    session_state.selected_options = {}
+    # Create the multi-select box
+    selections_urgent_important = st.multiselect("Urgent/Important", tasks.copy(), label_visibility="hidden")
+    st.write(selections_urgent_important)
+    st.subheader("Urgent/Not Important")
+    # Remove the tasks selected in the first multi-select box
+    tasks_copy = tasks.copy()
+    for task in selections_urgent_important:
+        tasks_copy.remove(task)
+    selections_urgent_notimportant = st.multiselect("Urgent/Not Important", tasks_copy, label_visibility="hidden")
+    st.write(selections_urgent_notimportant)
 
-# Create four multiselects with the same options
-selected_options = []
-for i in range(4):
-    selected_options.append(st.multiselect(f"Multiselect {i+1}", options=options))
-
-    # Update the session state with the selected options
-    session_state.selected_options[i] = selected_options[i]
-
-# Remove selected options from other multiselects
-for i in range(4):
-    for j in range(4):
-        if i != j:
-            selected_options[i] = [option for option in selected_options[i] if option not in session_state.selected_options[j]]
-
-# Display the selected options
-for i, select in enumerate(selected_options):
-    st.write(f"Selected options for Multiselect {i+1}: {select}")
+with sel_noturgent_important:
+    st.subheader("Not Urgent/Important")
+    # Remove the tasks selected in the first two multi-select boxes
+    tasks_copy = tasks.copy()
+    for task in selections_urgent_important:
+        tasks_copy.remove(task)
+    for task in selections_urgent_notimportant:
+        tasks_copy.remove(task)
+    selections_noturgent_important = st.multiselect("Not Urgent/Important", tasks_copy, label_visibility="hidden")
+    st.write(selections_noturgent_important)
+    st.subheader("Not Urgent/Not Important")
+    # Remove the tasks selected in all multi-select boxes
+    tasks_copy = tasks.copy()
+    for task in selections_urgent_important:
+        tasks_copy.remove(task)
+    for task in selections_urgent_notimportant:
+        tasks_copy.remove(task)
+    for task in selections_noturgent_important:
+        tasks_copy.remove(task)
+    selections_noturgent_notimportant = st.multiselect("Not Urgent/Not Important", tasks_copy, label_visibility="hidden")
+    st.write(selections_noturgent_notimportant)

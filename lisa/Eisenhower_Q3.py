@@ -15,7 +15,7 @@ def Eisenhower_quest3():
             f""" <p style="line-height:130%; font-size: 1.5vw; color: white">Now you know everything about the 
             Eisenhower matrix. Let's try to arrange your tasks on what you can do to escape the island once again. Do 
             you think you can do it like Eisenhower? Select the task you would like to sort into your very own 
-            Eisenhower matrix with with the multiselects.</p>""",
+            Eisenhower matrix with the multiselects.</p>""",
             unsafe_allow_html=True
         )
 
@@ -30,27 +30,37 @@ def Eisenhower_quest3():
         st.subheader("Urgent/Important")
 
         # Create the multi-select box
-        selections_urgent_important = st.multiselect("Urgent/Important",tasks, label_visibility="hidden")
+        selections_urgent_important = st.multiselect("Urgent/Important", tasks.copy(), label_visibility="hidden")
         st.write(selections_urgent_important)
-
+        st.subheader("Urgent/Not Important")
+        # Remove the tasks selected in the first multi-select box
+        tasks_copy = tasks.copy()
+        for task in selections_urgent_important:
+            tasks_copy.remove(task)
+        selections_urgent_notimportant = st.multiselect("Urgent/Not Important", tasks_copy, label_visibility="hidden")
+        st.write(selections_urgent_notimportant)
 
     with sel_noturgent_important:
         st.subheader("Not Urgent/Important")
-        selections_noturgent_important = st.multiselect("Not Urgent/Important", tasks, label_visibility="hidden")
+        # Remove the tasks selected in the first two multi-select boxes
+        tasks_copy = tasks.copy()
+        for task in selections_urgent_important:
+            tasks_copy.remove(task)
+        for task in selections_urgent_notimportant:
+            tasks_copy.remove(task)
+        selections_noturgent_important = st.multiselect("Not Urgent/Important", tasks_copy, label_visibility="hidden")
         st.write(selections_noturgent_important)
-
-
-    with sel_urgent_notimportant:
-        st.subheader("Urgent/Not Important")
-        selections_urgent_notimportant = st.multiselect(
-            "Urgent/Not Important", tasks, label_visibility="hidden")
-        st.write(selections_urgent_notimportant)
-
-    with sel_noturgent_notimportant:
         st.subheader("Not Urgent/Not Important")
-        selections_noturgent_notimportant = st.multiselect(
-            "Not Urgent/Not Important", tasks, label_visibility="hidden")
+        # Remove the tasks selected in all multi-select boxes
+        tasks_copy = tasks.copy()
+        for task in selections_urgent_important:
+            tasks_copy.remove(task)
+        for task in selections_urgent_notimportant:
+            tasks_copy.remove(task)
+        for task in selections_noturgent_important:
+            tasks_copy.remove(task)
+        selections_noturgent_notimportant = st.multiselect("Not Urgent/Not Important", tasks_copy,
+                                                           label_visibility="hidden")
         st.write(selections_noturgent_notimportant)
-
 
 

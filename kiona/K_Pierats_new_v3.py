@@ -4,6 +4,7 @@ from Eisenhower_Q3 import Eisenhower_quest3
 from Eisenhower_Q2 import Eisenhower_quest2
 from welcome_page_v2 import open_welcome
 from backpack import open_backpack
+from finish_page import open_finish
 
 # Initialize a session state variable that tracks the sidebar state (either 'expanded' or 'collapsed').
 if 'sidebar_state' not in st.session_state:
@@ -32,7 +33,8 @@ action = st.sidebar.radio("Hey sailor! What do you want to do?", ("Welcome",
                                                                   "Second Quest 🔒",
                                                                   "Third Quest 🔒",
                                                                   "Home 🏠",
-                                                                  "Backpack 🎒"))
+                                                                  "Backpack 🎒",
+                                                                  "Finish"))
 sidebar_color()
 
 
@@ -46,11 +48,11 @@ elif action == "First Quest 🏳️":
 elif action == "Second Quest 🔒":
     Eisenhower_quest2()
 
-
 elif action == "Third Quest 🔒":
     Eisenhower_quest3()
 
-
-
 elif action == "Backpack 🎒":
     open_backpack()
+
+elif action == "Finish":
+    open_finish()

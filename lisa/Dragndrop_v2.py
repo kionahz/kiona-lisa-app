@@ -1,56 +1,29 @@
 import streamlit as st
 
-st.set_page_config(
-    page_title="PIERATS - Productivity Island Expedition",
-    page_icon="🐢",
-    layout="wide",
-    initial_sidebar_state="expanded",
-    menu_items={
-            'Get Help': 'https://www.extremelycoolapp.com/help',
-            'Report a bug': "https://www.extremelycoolapp.com/bug",
-            'About': "# Kiona and Lisa's Game!"
-    }
-)
+# Define the options for the multiselects
+options = ["Option 1", "Option 2", "Option 3", "Option 4"]
 
-col1, col2 = st.columns(2)
+# Create a session state to store the selected options
+session_state = st.session_state
 
-with col1:
-    st.image("../pictures/em_empty.png")
+# Initialize the selected options if they don't exist in the session state
+if "selected_options" not in session_state:
+    session_state.selected_options = {}
 
-with col2:
-    st.markdown("Now you know how the matrix works. Now arrange the same tasks as before in the matrix. Does it make a difference to you in the decision-making process?")
+# Create four multiselects with the same options
+selected_options = []
+for i in range(4):
+    selected_options.append(st.multiselect(f"Multiselect {i+1}", options=options))
 
-col3, col4 = st.columns(2)
-col5, col6 = st.columns(2)
+    # Update the session state with the selected options
+    session_state.selected_options[i] = selected_options[i]
 
-with col3:
-    st.multiselect(
-    "Urgent/Important",
-    ["Search for a container (for food or water)", "Build a fire", "Build Shelter", "Collect Shells", "Collect Wood",
-     "Watch the Sunset", "Search for drinking water", "Search for Food", "Build a Weapon", "Explore the surroundings"]
-)
+# Remove selected options from other multiselects
+for i in range(4):
+    for j in range(4):
+        if i != j:
+            selected_options[i] = [option for option in selected_options[i] if option not in session_state.selected_options[j]]
 
-with col4:
-    st.multiselect(
-    "Not Urgent/Important",
-        ["Search for a container (for food or water)", "Build a fire", "Build Shelter", "Collect Shells",
-         "Collect Wood",
-         "Watch the Sunset", "Search for drinking water", "Search for Food", "Build a Weapon",
-         "Explore the surroundings"]
-)
-
-with col5:
-    st.multiselect(
-        "Urgent/Not Important",
-        ["Search for a container (for food or water)", "Build a fire", "Build Shelter", "Collect Shells",
-         "Collect Wood", "Watch the Sunset", "Search for drinking water", "Search for Food", "Build a Weapon",
-         "Explore the surroundings"]
-    )
-
-with col6:
-    st.multiselect(
-        "Not Urgent/Not Important",
-        ["Search for a container (for food or water)", "Build a fire", "Build Shelter", "Collect Shells",
-         "Collect Wood", "Watch the Sunset", "Search for drinking water", "Search for Food", "Build a Weapon",
-         "Explore the surroundings"]
-    )
+# Display the selected options
+for i, select in enumerate(selected_options):
+    st.write(f"Selected options for Multiselect {i+1}: {select}")

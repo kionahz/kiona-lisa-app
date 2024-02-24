@@ -5,17 +5,25 @@ from Eisenhower_Q2 import Eisenhower_quest2
 from welcome_page import open_welcome
 from backpack import open_backpack
 
+# Initialize a session state variable that tracks the sidebar state (either 'expanded' or 'collapsed').
+if 'sidebar_state' not in st.session_state:
+        st.session_state.sidebar_state = 'collapsed'
+
+
 st.set_page_config(
     page_title="PIERATS - Productivity Island Expedition",
     page_icon="🐢",
     layout="wide",
-    initial_sidebar_state="expanded",
+    initial_sidebar_state=st.session_state.sidebar_state,
     menu_items={
             'Get Help': 'https://www.extremelycoolapp.com/help',
             'Report a bug': "https://www.extremelycoolapp.com/bug",
             'About': "# Kiona and Lisa's Game!"
     }
 )
+
+
+
 
 st.sidebar.image("../pictures/shelly_ahoi.png")
 # Set up sidebar

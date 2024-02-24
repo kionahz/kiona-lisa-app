@@ -2,6 +2,7 @@ import streamlit as st
 
 
 def Eisenhower_quest2():
+    initial_sidebar_state = "collapsed"
     st.title("Eisenhower Matrix")
     tab_titles = ["Eisenhower Matrix", "(1) Do", "(2) Schedule", "(3) Delegate", "(4) Delete", "Did you know?"]
     tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs(tab_titles)

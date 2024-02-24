@@ -1,13 +1,13 @@
 import streamlit as st
 
-def Eisenhower_quest3():
 
+def Eisenhower_quest3():
     tasks = ["Search for a container (for food or water)", "Build a fire", "Build Shelter", "Collect Shells",
              "Collect Wood",
              "Watch the Sunset", "Search for drinking water", "Search for Food", "Build a Weapon",
              "Explore the surroundings"]
 
-    col_title, col_img = st.columns((2,1))
+    col_title, col_img = st.columns((2, 1))
 
     with col_title:
         st.title("Now it's your turn!")
@@ -22,9 +22,7 @@ def Eisenhower_quest3():
     with col_img:
         st.image("../pictures/em_empty.png")
 
-
-    sel_urgent_important, sel_noturgent_important = st.columns(2)
-    sel_urgent_notimportant, sel_noturgent_notimportant = st.columns(2)
+    sel_urgent_important, sel_noturgent_notimportant = st.columns(2)
 
     with sel_urgent_important:
         st.subheader("Urgent/Important")
@@ -40,7 +38,7 @@ def Eisenhower_quest3():
         selections_urgent_notimportant = st.multiselect("Urgent/Not Important", tasks_copy, label_visibility="hidden")
         st.write(selections_urgent_notimportant)
 
-    with sel_noturgent_important:
+    with sel_noturgent_notimportant:
         st.subheader("Not Urgent/Important")
         # Remove the tasks selected in the first two multi-select boxes
         tasks_copy = tasks.copy()
@@ -62,5 +60,3 @@ def Eisenhower_quest3():
         selections_noturgent_notimportant = st.multiselect("Not Urgent/Not Important", tasks_copy,
                                                            label_visibility="hidden")
         st.write(selections_noturgent_notimportant)
-
-

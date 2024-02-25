@@ -35,7 +35,7 @@ if st.sidebar.button("Welcome"):
 if st.sidebar.button("First Quest"):
     st.markdown("First Quest")
 if st.sidebar.button("Second Quest"):
-    st.switch_page("pages/Eisenhower_Q2.py")
+    st.switch_page("pagesy/Eisenhower_Q2.py")
 if st.sidebar.button("Third Quest"):
     Eisenhower_quest3()
 if st.sidebar.button("Backpack 1"):

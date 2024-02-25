@@ -22,8 +22,6 @@ def open_welcome():
                 unsafe_allow_html=True
             )
 
-
-
     with tab2:
         col1, col2, col3, col4 = st.columns((1, 6, 5, 1))
         with col2:

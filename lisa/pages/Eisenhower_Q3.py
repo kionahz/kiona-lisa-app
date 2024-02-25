@@ -22,7 +22,19 @@ def Eisenhower_quest3():
     with col_img:
         st.image("../pictures/em_empty.png")
 
-    sel_urgent_important, sel_noturgent_notimportant = st.columns(2)
+    st.divider()
+
+    task_column, sel_urgent_important, sel_noturgent_notimportant = st.columns((2, 3, 3))
+
+    with task_column:
+
+        with st.expander(label="Click here to see your tasks again", expanded=False):
+
+            st.markdown(f""" 
+            <p style="line-height:150%; font-size: 1.1vw; color: white">· Build a Fire<br>· Collect Shells<br>· Build a 
+            shelter<br>· Search for Food<br>· Build a Weapon<br>· Collect Wood<br>· Watch the Sunset<br>· Search for 
+            drinking water<br>· Explore the surroundings<br>· Search for a container (for food or water)</p>""",
+                        unsafe_allow_html=True)
 
     with sel_urgent_important:
         st.subheader("Urgent/Important")

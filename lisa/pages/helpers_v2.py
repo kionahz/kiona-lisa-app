@@ -14,7 +14,7 @@ def sidebar_color():
 
 
 def eisenhower_bg():
-    eisenhower_bg_image = open("../pictures/em_empty.png", "rb").read()
+    eisenhower_bg_image = open("../../pictures/em_empty.png", "rb").read()
     eisenhower_bg_image_base64 = base64.b64encode(eisenhower_bg_image).decode('utf-8')
     eisenhower_bg_image_url = f"data:image/png;base64,{eisenhower_bg_image_base64}"
 

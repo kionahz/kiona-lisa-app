@@ -1,5 +1,5 @@
 import streamlit as st
-from helpers_v2 import sidebar_color, eisenhower_bg
+from helpers_v2 import sidebar_color
 from Eisenhower_Q3 import Eisenhower_quest3
 from Eisenhower_Q2 import Eisenhower_quest2
 from welcome_page_v2 import open_welcome

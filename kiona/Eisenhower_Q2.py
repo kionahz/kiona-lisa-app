@@ -83,15 +83,16 @@ def Eisenhower_quest2():
             st.image("../pictures/Dwight_D._Eisenhower.jpg")
         with col2:
             st.markdown(
-                f"""<p style="line-height: 130%; font-size: 2vw; color: white">Did you know? Eisenhower Matrix</p> <p 
-                style="line-height:130%; font-size: 1.5vw; color: white">The idea that would later lead to the 
-                development of the Eisenhower Matrix became famous thanks to US President Dwight D. Eisenhower. In a 
-                speech in 1954, the 34th American president quoted a university president saying: "I have two 
-                kinds of problems, the urgent and the important. The urgent ones are not important, and the important 
-                ones are never urgent." Stephen Covey, the author of the book "The 7 Ways to Effectiveness", 
-                took Eisenhower's words and developed the task management method now widely known as the Eisenhower 
-                Matrix. The Eisenhower Matrix is also known as the Eisenhower Principle, the Eisenhower Method and 
-                the Urgent-Important Matrix.</p>""",
+                f"""<p style="line-height: 130%; font-size: 2vw; color: white">Did you know?</p> <p 
+                style="line-height:130%; font-size: 1.5vw; color: white"> Back in 1954, US President Dwight D. 
+                Eisenhower mentioned in one of his speeches that he has a problem with time management, 
+                where he always encounters the same problems: "I have two kinds of problems, the urgent and the 
+                important. The urgent ones are not important, and the important ones are never urgent." Does it sound 
+                familiar to you?<br><br>Now, fast forward a bit to Stephen Covey, the genius behind a book called 
+                "The 7 Habits of Highly Effective People" took Eisenhower's words and turned it into what we now call 
+                the Eisenhower Matrix. Also, it goes by a few other names like the Eisenhower Principle or the 
+                Urgent-Important Matrix.<br><br>Cool, huh? So even a president was struggling with the same problem 
+                as you might be. </p>""",
                 unsafe_allow_html=True
             )
 

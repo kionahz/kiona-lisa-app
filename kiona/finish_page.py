@@ -2,13 +2,15 @@ import streamlit as st
 import base64
 
 
+# Code from https://discuss.streamlit.io/t/how-to-play-an-audio-file-automatically-generated-using-text-to-speech-in
+# -streamlit/33201/2
 def autoplay_audio(file_path: str):
     with open(file_path, "rb") as f:
         data = f.read()
         b64 = base64.b64encode(data).decode()
         md = f"""
             <audio controls autoplay="true">
-            <source src="../audio/Orinoco-Flow.mp3;base64,{b64}" type="audio/mp3">
+            <source src="data:audio/mp3;base64,{b64}" type="audio/mp3">
             </audio>
             """
         st.markdown(
@@ -18,7 +20,6 @@ def autoplay_audio(file_path: str):
 
 
 def open_finish():
-    autoplay_audio("../audio/Orinoco-Flow.mp3")
     initial_sidebar_state = "collapsed"
     col1, col2 = st.columns((1, 5))
     col1.image("../pictures/turtle.png", width=120)
@@ -30,3 +31,4 @@ def open_finish():
     with col5:
         if st.button("Thanks for playing!"):
             st.balloons()
+        autoplay_audio("../audio/Orinoco-Flow.mp3")

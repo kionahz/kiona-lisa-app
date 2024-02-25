@@ -1,6 +1,6 @@
 import streamlit as st
 from helpers_v2 import sidebar_color
-from welcome_page import open_welcome
+from welcome_page_v2 import open_welcome
 from second_quest import open_second_quest
 from first_quest import open_first_quest
 from backpack import open_backpack

@@ -8,7 +8,7 @@ def autoplay_audio(file_path: str):
         b64 = base64.b64encode(data).decode()
         md = f"""
             <audio controls autoplay="true">
-            <source src="data:audio/mp3;base64,{b64}" type="audio/mp3">
+            <source src="../audio/Orinoco-Flow.mp3;base64,{b64}" type="audio/mp3">
             </audio>
             """
         st.markdown(
@@ -18,7 +18,7 @@ def autoplay_audio(file_path: str):
 
 
 def open_finish():
-    autoplay_audio("local_audio.mp3")
+    autoplay_audio("../audio/Orinoco-Flow.mp3")
     initial_sidebar_state = "collapsed"
     col1, col2 = st.columns((1, 5))
     col1.image("../pictures/turtle.png", width=120)

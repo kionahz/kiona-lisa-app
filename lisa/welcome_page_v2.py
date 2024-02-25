@@ -3,9 +3,9 @@ import streamlit as st
 
 def open_welcome():
     initial_sidebar_state = "collapsed"
-    col1, col2 = st.columns((6, 1))
+    col1, col2 = st.columns((7, 1))
     col1.title("PIERATS - Productivity Island Expedition")
-    col2.image("../pictures/logo.png", width=120)
+    col2.image("../pictures/logo.png")
     tab_titles = ["AHOI", "How to get started"]
     tab1, tab2 = st.tabs(tab_titles)
 

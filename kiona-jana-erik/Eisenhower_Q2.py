@@ -1,4 +1,5 @@
 import streamlit as st
+import game_def_test
 
 
 def Eisenhower_quest2():
@@ -96,7 +97,10 @@ def Eisenhower_quest2():
                 unsafe_allow_html=True
             )
         # while Schleife
-        if st.button("Quest 2"):
-            return 0
+        if st.button("Next Quest"):
+            st.session_state["scenes_counter"]["intro_counter"] += 1
+            st.session_state.place = "Eisenhower_Q3"
+            game_def_test.temp_clear()
+            st.rerun()
 
 

@@ -1,4 +1,5 @@
 import streamlit as st
+import game_def_test
 
 def Eisenhower_quest3():
 

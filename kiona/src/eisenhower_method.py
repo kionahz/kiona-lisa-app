@@ -1,9 +1,7 @@
 import streamlit as st
-import game_def_test
 
 
-def Eisenhower_quest2():
-    initial_sidebar_state = "collapsed"
+def render_eisenhower_method():
     st.title("Eisenhower Matrix")
     tab_titles = ["Eisenhower Matrix", "(1) Do", "(2) Schedule", "(3) Delegate", "(4) Delete", "Did you know?"]
     tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs(tab_titles)
@@ -21,7 +19,6 @@ def Eisenhower_quest2():
                 Continue clicking through the tabs above to learn more about each field</p>""",
                 unsafe_allow_html=True
             )
-
 
     with tab2:
         col1, col2 = st.columns((2, 1))
@@ -96,11 +93,11 @@ def Eisenhower_quest2():
                 as you might be. </p>""",
                 unsafe_allow_html=True
             )
-        # while Schleife
-        if st.button("Next Quest"):
-            # st.session_state["scenes_counter"]["intro_counter"] += 1
-            st.session_state.place = "Eisenhower_Q3"
-            game_def_test.temp_clear()
-            st.rerun()
+
+            # button to start the next quest
+            if st.button("View map"):
+                st.session_state["temp"] = ""
+                st.session_state.place = "map_2"
+                st.rerun()
 
 

@@ -22,7 +22,7 @@ def map_1():
         )
 
     if st.button("Next Quest"):
-        st.session_state["scenes_counter"]["intro_counter"] += 1
+        # st.session_state["scenes_counter"]["intro_counter"] += 1
         st.session_state.place = "Eisenhower_Q2"
         game_def_test.temp_clear()
         st.rerun()

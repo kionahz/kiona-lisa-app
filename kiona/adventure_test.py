@@ -15,24 +15,21 @@ st.set_page_config(page_title="PIERATS", page_icon="turtle")
 start = False
 
 # set session states
-
-if "level" not in st.session_state:
-    st.session_state["level"] = 0
+# if "level" not in st.session_state:
+#    st.session_state["level"] = 0
 if "place" not in st.session_state:
     st.session_state["place"] = "map_1"
 if "temp" not in st.session_state:
     st.session_state["temp"] = ""
-if "counter" not in st.session_state:
-    st.session_state["counter"] = 0
-if "scenes_counter" not in st.session_state:
-    st.session_state["scenes_counter"] = {
-        "intro_counter": 0,
-        "cave_counter": 0,
-        "trip_counter": 0,
-        "elf_counter": 0,
-    }
-
-# ----------------- game start --------
+#if "counter" not in st.session_state:
+#    st.session_state["counter"] = 0
+#if "scenes_counter" not in st.session_state:
+#    st.session_state["scenes_counter"] = {
+#        "intro_counter": 0,
+#        "cave_counter": 0,
+#        "trip_counter": 0,
+#        "elf_counter": 0,
+#    }
 
 
 welcome = st.empty()
@@ -72,24 +69,24 @@ if start:
 # this part of the code focuses input on text window
 # please note that counter is required - for streamlit specific it does not work without it
 
-components.html(
-    f"""
-        <div>some hidden container</div>
-        <p>{st.session_state.counter}</p>
-        <script>
-            var input = window.parent.document.querySelectorAll("input[type=text]");
-            for (var i = 0; i < input.length; ++i) {{
-                input[i].focus();
-            }}
-    </script>
-    """,
-    height=0,
-)
+#components.html(
+#    f"""
+#        <div>some hidden container</div>
+#        <p>{st.session_state.counter}</p>
+#        <script>
+#            var input = window.parent.document.querySelectorAll("input[type=text]");
+#            for (var i = 0; i < input.length; ++i) {{
+#                input[i].focus();
+#            }}
+#    </script>
+#    """,
+#    height=0,
+#)
 
-hide_streamlit_style = """
-            <style>
-            footer {visibility: hidden;}
-            </style>
-            """
-st.markdown(hide_streamlit_style, unsafe_allow_html=True)
+#hide_streamlit_style = """
+#            <style>
+#            footer {visibility: hidden;}
+#            </style>
+#            """
+#st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 

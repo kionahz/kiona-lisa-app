@@ -31,4 +31,4 @@ def open_finish():
     with col5:
         if st.button("Thanks for playing!"):
             st.balloons()
-        autoplay_audio("../../audio/Orinoco-Flow.mp3")
+        autoplay_audio("../audio/Orinoco-Flow.mp3")

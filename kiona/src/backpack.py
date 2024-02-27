@@ -71,7 +71,7 @@ def render_backpack_4():
     st.divider()
     col3, col4, col5 = st.columns((4, 1, 2))
     with col3:
-        st.image("../pictures/backpack_items_all.png")
+        st.image("../pictures/backpack_items_4.png")
     with col5:
         st.markdown(
             f""" <p style="line-height:130%; font-size: 1.5vw; color: white"><br><br><br>Awesome!<br><br>You collected 

@@ -78,7 +78,7 @@ def render_eisenhower_method():
     with tab6:
         col1, col2 = st.columns(2)
         with col1:
-            st.image("../pictures/Dwight_D._Eisenhower.jpg")
+            st.image("../pictures/dwight_eisenhower.png")
         with col2:
             st.markdown(
                 f"""<p style="line-height: 130%; font-size: 2vw; color: white">Did you know?</p> <p 

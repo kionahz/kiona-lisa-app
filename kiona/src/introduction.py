@@ -4,11 +4,11 @@ import streamlit as st
 def render_introduction():
     col1, col2 = st.columns((6, 1))
     col1.title("PIERATS - Productivity Island Expedition")
-    col2.image("../pictures/logo.png", width=120)
+    col2.image("../pictures/logo.png")
 
     col1, col2, col3, col4 = st.columns((1, 4, 4, 1))
     with col2:
-        st.image("../pictures/shelly_attemptspeech.png")
+        st.image("../pictures/shelly_speech.png")
     with col3:
         st.markdown(
             f""" <br><br><br><p style="line-height:130%; font-size:2vw; color:white">AHOI 

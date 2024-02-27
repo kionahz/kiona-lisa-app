@@ -8,7 +8,7 @@ def render_eisenhower_method():
     tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs(tab_titles)
 
     with tab1:
-        col1, col2 = st.columns((2,1))
+        col1, col2 = st.columns((2, 1))
         with col1:
             st.image("../pictures/em_empty.png")
         with col2:
@@ -20,7 +20,6 @@ def render_eisenhower_method():
                 Continue clicking through the tabs above to learn more about each field</p>""",
                 unsafe_allow_html=True
             )
-
 
     with tab2:
         col1, col2 = st.columns((2, 1))
@@ -96,3 +95,8 @@ def render_eisenhower_method():
                 unsafe_allow_html=True
             )
 
+            # button to start the next quest
+            if st.button("View map"):
+                st.session_state["temp"] = ""
+                st.session_state.place = "map_2"
+                st.rerun()

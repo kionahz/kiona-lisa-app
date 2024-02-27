@@ -1,11 +1,11 @@
 import streamlit as st
 
 
-def pomodoro_technique():
+def render_pomodoro_method():
 
     st.title("Pomodoro Technique")
 
-    tab_titles = ["Tomatoes", "Pomodro"]
+    tab_titles = ["Tomatoes", "Pomodoro"]
     tab1, tab2 = st.tabs(tab_titles)
 
     with tab1:
@@ -26,3 +26,9 @@ def pomodoro_technique():
             st.image("../pictures/pomodoro.png")
         with col6:
             st.markdown("test")
+
+            # button to start the next quest
+            if st.button("View map"):
+                st.session_state["temp"] = ""
+                st.session_state.place = "map_6"
+                st.rerun()

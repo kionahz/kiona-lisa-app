@@ -1,13 +1,13 @@
 import streamlit as st
-from pages.helpers_v2 import sidebar_color
-from pages.Eisenhower_Q3 import Eisenhower_quest3
-from pages.Eisenhower_Q2 import Eisenhower_quest2
-from pages.welcome_page_v2 import open_welcome
-from pages.backpack import open_backpack_1, open_backpack_2, open_backpack_3, open_backpack_4
+from pages.Helpers import sidebar_color
+from pages.Eisenhower_q2 import Eisenhower_quest3
+from pages.Eisenhower_method import Eisenhower_quest2
+from pages.Introduction import open_welcome
+from pages.Backpack import open_backpack_1, open_backpack_2, open_backpack_3, open_backpack_4
 from pages.Blurting_method import blurting_method
 from pages.Cornell_method import cornell_method
-from pages.Pomodoro_technique import pomodoro_technique
-from pages.finish_page import open_finish
+from pages.Pomodoro_method import pomodoro_technique
+from pages.Sail_away import open_finish
 
 # Initialize a session state variable that tracks the sidebar state (either 'expanded' or 'collapsed').
 if 'sidebar_state' not in st.session_state:

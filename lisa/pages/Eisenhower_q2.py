@@ -1,7 +1,8 @@
 import streamlit as st
 
+# todo Button
 
-def Eisenhower_quest3():
+def render_eisenhower_q2():
     tasks = ["Search for a container (for food or water)", "Build a fire", "Build Shelter", "Collect Shells",
              "Collect Wood",
              "Watch the Sunset", "Search for drinking water", "Search for Food", "Build a Weapon",
@@ -72,3 +73,9 @@ def Eisenhower_quest3():
         selections_noturgent_notimportant = st.multiselect("Not Urgent/Not Important", tasks_copy,
                                                            label_visibility="hidden")
         st.write(selections_noturgent_notimportant)
+
+    # button to start the next quest
+    if st.button("View map"):
+        st.session_state["temp"] = ""
+        st.session_state.place = "map_3"
+        st.rerun()

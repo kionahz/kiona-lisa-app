@@ -1,16 +1,16 @@
 import streamlit as st
 # import streamlit.components.v1 as components
-from pages.helpers import sidebar_color
-from pages.map import render_map_1, render_map_2, render_map_3, render_map_4, render_map_5, render_map_6
-from pages.backpack import render_backpack_1, render_backpack_2, render_backpack_3, render_backpack_4
-from pages.introduction import render_introduction
-from pages.eisenhower_q1 import render_eisenhower_q1
-from pages.eisenhower_method import render_eisenhower_method
-from pages.eisenhower_q2 import render_eisenhower_q2
-from pages.cornell_method import render_cornell_method
-from pages.blurting_method import render_blurting_method
-from pages.pomodoro_method import render_pomodoro_method
-from pages.sail_away import render_sail_away
+from pages.Helpers import sidebar_color
+from pages.Map import render_map_1, render_map_2, render_map_3, render_map_4, render_map_5, render_map_6
+from pages.Backpack import render_backpack_1, render_backpack_2, render_backpack_3, render_backpack_4
+from pages.Introduction import render_introduction
+from pages.Eisenhower_q1 import render_eisenhower_q1
+from pages.Eisenhower_method import render_eisenhower_method
+from pages.Eisenhower_q2 import render_eisenhower_q2
+from pages.Cornell_method import render_cornell_method
+from pages.Blurting_method import render_blurting_method
+from pages.Pomodoro_method import render_pomodoro_method
+from pages.Sail_away import render_sail_away
 
 
 st.set_page_config(

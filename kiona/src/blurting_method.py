@@ -19,8 +19,8 @@ def render_blurting_method():
         with col3:
             st.markdown("text")
 
-    # button to start the next quest
-    if st.button("View map"):
-        st.session_state["temp"] = ""
-        st.session_state.place = "map_5"
-        st.rerun()
+            # button to start the next quest
+            if st.button("View map"):
+                st.session_state["temp"] = ""
+                st.session_state.place = "map_5"
+                st.rerun()

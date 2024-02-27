@@ -15,10 +15,10 @@ def render_backpack_1():
                     size.<br><br>Good job!</p>""",
             unsafe_allow_html=True
         )
-    if st.button("Next Quest"):
-        st.session_state["temp"] = ""
-        st.session_state.place = "cornell_method"
-        st.rerun()
+        if st.button("Next Quest"):
+            st.session_state["temp"] = ""
+            st.session_state.place = "cornell_method"
+            st.rerun()
 
 
 def render_backpack_2():
@@ -36,10 +36,10 @@ def render_backpack_2():
                     work!</p>""",
             unsafe_allow_html=True
         )
-    if st.button("Next Quest"):
-        st.session_state["temp"] = ""
-        st.session_state.place = "blurting_method"
-        st.rerun()
+        if st.button("Next Quest"):
+            st.session_state["temp"] = ""
+            st.session_state.place = "blurting_method"
+            st.rerun()
 
 
 def render_backpack_3():
@@ -55,10 +55,10 @@ def render_backpack_3():
                     third item in your backpack. Its a fabric that can help you fix your sails.<br><br>Don't stop now, you are almost there!</p>""",
             unsafe_allow_html=True
         )
-    if st.button("Next Quest"):
-        st.session_state["temp"] = ""
-        st.session_state.place = "pomodoro_method"
-        st.rerun()
+        if st.button("Next Quest"):
+            st.session_state["temp"] = ""
+            st.session_state.place = "pomodoro_method"
+            st.rerun()
 
 
 def render_backpack_4():
@@ -75,7 +75,7 @@ def render_backpack_4():
                     sails.<br><br>Good work. You can now finally repair your boat and sail away!</p>""",
             unsafe_allow_html=True
         )
-    if st.button("Sail Away"):
-        st.session_state["temp"] = ""
-        st.session_state.place = "sail_away"
-        st.rerun()
+        if st.button("Sail Away"):
+            st.session_state["temp"] = ""
+            st.session_state.place = "sail_away"
+            st.rerun()

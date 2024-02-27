@@ -20,7 +20,6 @@ def autoplay_audio(file_path: str):
 
 
 def render_sail_away():
-    initial_sidebar_state = "collapsed"
     col1, col2 = st.columns((1, 5))
     col1.image("../pictures/shelly.png")
     col2.title("Well done Sailor! You can now call yourself CAPTAIN PRODUCTIVITY!!! Sail home safely!")

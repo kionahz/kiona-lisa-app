@@ -2,7 +2,7 @@ import streamlit as st
 
 
 def render_introduction():
-    col1, col2 = st.columns((6, 1))
+    col1, col2 = st.columns((7, 1))
     col1.title("PIERATS - Productivity Island Expedition")
     col2.image("../pictures/logo.png")
 
@@ -12,9 +12,9 @@ def render_introduction():
     with col3:
         st.markdown(
             f""" <br><br><br><p style="line-height:130%; font-size:2vw; color:white">AHOI 
-            {st.session_state.player_name}</p>
+            {st.session_state.player_name} ⛵️</p>
             <p style="line-height:130%; font-size: 1.5vw; color: white">I am Productivishelly,
-            I will join you on your journey to better time managment and show you differnt methods!
+            I will join you on your journey to better time management and show you different methods!
             You can click on the tabs above my head to check out how to start the game. I'll see you there!</p>""",
             unsafe_allow_html=True
         )

@@ -39,7 +39,7 @@ if "temp" not in st.session_state:
 
 
 welcome = st.empty()
-welcome.title("Welcome to PIERATS the Productivity Island Expedition, adventurer!")
+welcome.title("Welcome to PIERATS the Productivity Island Expedition!")
 
 # hero base statistics
 

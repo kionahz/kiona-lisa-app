@@ -33,28 +33,38 @@ sidebar_color()
 # variable responsible for checking if player provided his name and game can be started
 start = False
 
-# set session states
+# set session state
 if "place" not in st.session_state:
     st.session_state["place"] = "introduction"
 
+col1, col2, col3 = st.columns((1, 4, 1))
+with col2:
+    welcome = st.empty()
+    welcome.title("Welcome to PIERATS the Productivity Island Expedition!")
 
+    divider = st.divider()
 
-welcome = st.empty()
-welcome.title("Welcome to PIERATS the Productivity Island Expedition!")
+    input_text = st.markdown(f"""<p style="line-height:130%; font-size: 1.5vw; color: white">If you are ready for 
+    this crazy adventure enter your name and hit enter to start the game</p>""", unsafe_allow_html=True)
+    player_name_container = st.empty()
+    player_name_container.text_input(
+        "If you are ready for this crazy adventure enter your name and hit enter to start the game", key="player_name",
+        label_visibility="hidden"
+    )
+    main_text_container = st.empty()
 
-# hero base statistics
-
-player_name_container = st.empty()
-player_name_container.text_input(
-    "If you are ready for this crazy adventure enter your name and hit enter to start the game", key="player_name"
-)
-main_text_container = st.empty()
-
+col4, col5, col6 = st.columns((1, 1, 1))
+with col5:
+    logo = st.image("../pictures/logo.png")
 
 if st.session_state.player_name != "":
-    player_name_container.empty()
-
+    welcome.empty()
+    divider.empty()
+    input_text.empty()
     main_text_container.empty()
+    player_name_container.empty()
+    logo.empty()
+
     start = True
 
 # START THE GAME
@@ -200,24 +210,11 @@ if start:
         st.sidebar.markdown("Pomodoro Method")
         st.sidebar.markdown("Sail Away")
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-#if "temp" not in st.session_state:
+# if "temp" not in st.session_state:
 #    st.session_state["temp"] = ""
-#if "counter" not in st.session_state:
+# if "counter" not in st.session_state:
 #    st.session_state["counter"] = 0
-#if "scenes_counter" not in st.session_state:
+# if "scenes_counter" not in st.session_state:
 #    st.session_state["scenes_counter"] = {
 #        "intro_counter": 0,
 #        "cave_counter": 0,
@@ -229,7 +226,7 @@ if start:
 # this part of the code focuses input on text window
 # please note that counter is required - for streamlit specific it does not work without it
 
-#components.html(
+# components.html(
 #    f"""
 #        <div>some hidden container</div>
 #        <p>{st.session_state.counter}</p>
@@ -241,12 +238,11 @@ if start:
 #    </script>
 #    """,
 #    height=0,
-#)
+# )
 
-#hide_streamlit_style = """
+# hide_streamlit_style = """
 #            <style>
 #            footer {visibility: hidden;}
 #            </style>
 #            """
-#st.markdown(hide_streamlit_style, unsafe_allow_html=True)
-
+# st.markdown(hide_streamlit_style, unsafe_allow_html=True)

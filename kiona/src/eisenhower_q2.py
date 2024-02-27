@@ -15,7 +15,7 @@ def render_eisenhower_q2():
             f""" <p style="line-height:130%; font-size: 1.5vw; color: white">Now you know everything about the 
                 Eisenhower matrix. Let's try to arrange your tasks on what you can do to escape the island once again. Do 
                 you think you can do it like Eisenhower? Select the task you would like to sort into your very own 
-                Eisenhower matrix with the multiselects.</p>""",
+                Eisenhower matrix with the multi selects.</p>""",
             unsafe_allow_html=True
         )
 

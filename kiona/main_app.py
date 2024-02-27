@@ -12,6 +12,8 @@ from src.blurting_method import render_blurting_method
 from src.pomodoro_method import render_pomodoro_method
 from src.sail_away import render_sail_away
 
+# Todo delete all commented out stuff at the bottom!!!
+
 
 st.set_page_config(
     page_title="PIERATS - Productivity Island Expedition",

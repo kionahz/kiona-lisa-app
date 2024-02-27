@@ -97,7 +97,7 @@ def render_eisenhower_method():
             # button to start the next quest
             if st.button("View map"):
                 st.session_state["temp"] = ""
-                st.session_state.place = "map_2"
+                st.session_state.place = "map_3"
                 st.rerun()
 
 

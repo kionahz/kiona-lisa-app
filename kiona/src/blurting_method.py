@@ -22,5 +22,5 @@ def render_blurting_method():
             # button to start the next quest
             if st.button("View map"):
                 st.session_state["temp"] = ""
-                st.session_state.place = "map_5"
+                st.session_state.place = "map_6"
                 st.rerun()

@@ -2,9 +2,32 @@ import streamlit as st
 
 
 def render_map_1():
+    col1, col2, col3, col4 = st.columns((1, 6, 5, 1))
+    with col2:
+        st.image("../pictures/island_01.png")
+    with col3:
+        st.markdown(
+            f""" <p style="line-height:130%; font-size: 2vw; color: white">OH NO, WHAT HAPPENED HERE?!</p> <p 
+                    style="line-height:130%; font-size: 1.5vw; color: white">Looks like you and your little brother 
+                    stranded on a deserted island. Unfortunately, your boat has broken down and you need new equipment. 
+                    As you explore the individual quests, you will find new materials and learn new things in order to 
+                    survive and ultimately escape from the island.\n Let's get started and begin with the first 
+                    quest!</p> """,
+            unsafe_allow_html=True
+        )
+
+        # button to start the next quest
+        if st.button("Next Quest"):
+            st.session_state["temp"] = ""
+            st.session_state.place = "eisenhower_q1"
+            st.rerun()
+
+
+def render_map_2():
     col1, col2 = st.columns((5, 1))
     col1.title("The Map")
     col2.image("../pictures/logo.png")
+    st.divider()
     col3, col4, col5 = st.columns((4, 1, 2))
     with col3:
         st.image("../pictures/island_02.png")
@@ -16,10 +39,11 @@ def render_map_1():
             st.rerun()
 
 
-def render_map_2():
+def render_map_3():
     col1, col2 = st.columns((5, 1))
     col1.title("The Map")
     col2.image("../pictures/logo.png")
+    st.divider()
     col3, col4, col5 = st.columns((4, 1, 2))
     with col3:
         st.image("../pictures/island_03.png")
@@ -31,10 +55,11 @@ def render_map_2():
             st.rerun()
 
 
-def render_map_3():
+def render_map_4():
     col1, col2 = st.columns((5, 1))
     col1.title("The Map")
     col2.image("../pictures/logo.png")
+    st.divider()
     col3, col4, col5 = st.columns((4, 1, 2))
     with col3:
         st.image("../pictures/island_04.png")
@@ -51,10 +76,11 @@ def render_map_3():
             st.rerun()
 
 
-def render_map_4():
+def render_map_5():
     col1, col2 = st.columns((5, 1))
     col1.title("The Map")
     col2.image("../pictures/logo.png")
+    st.divider()
     col3, col4, col5 = st.columns((4, 1, 2))
     with col3:
         st.image("../pictures/island_05.png")
@@ -71,10 +97,11 @@ def render_map_4():
             st.rerun()
 
 
-def render_map_5():
+def render_map_6():
     col1, col2 = st.columns((5, 1))
     col1.title("The Map")
     col2.image("../pictures/logo.png")
+    st.divider()
     col3, col4, col5 = st.columns((4, 1, 2))
     with col3:
         st.image("../pictures/island_06.png")
@@ -91,10 +118,11 @@ def render_map_5():
             st.rerun()
 
 
-def render_map_6():
+def render_map_7():
     col1, col2 = st.columns((5, 1))
     col1.title("The Map")
     col2.image("../pictures/logo.png")
+    st.divider()
     col3, col4, col5 = st.columns((4, 1, 2))
     with col3:
         st.image("../pictures/island_07.png")

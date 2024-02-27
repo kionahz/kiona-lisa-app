@@ -5,6 +5,7 @@ def render_backpack_1():
     col1, col2 = st.columns((5, 1))
     col1.title("Your Backpack")
     col2.image("../pictures/backpack.png")
+    st.divider()
     col3, col4, col5 = st.columns((4, 1, 2))
     with col3:
         st.image("../pictures/backpack_items_1.png")
@@ -25,6 +26,7 @@ def render_backpack_2():
     col1, col2 = st.columns((5, 1))
     col1.title("Your Backpack")
     col2.image("../pictures/backpack.png")
+    st.divider()
     col3, col4, col5 = st.columns((4, 1, 2))
     with col3:
         st.image("../pictures/backpack_items_2.png")
@@ -46,6 +48,7 @@ def render_backpack_3():
     col1, col2 = st.columns((5, 1))
     col1.title("Your Backpack")
     col2.image("../pictures/backpack.png")
+    st.divider()
     col3, col4, col5 = st.columns((4, 1, 2))
     with col3:
         st.image("../pictures/backpack_items_3.png")
@@ -65,6 +68,7 @@ def render_backpack_4():
     col1, col2 = st.columns((5, 1))
     col1.title("Your Backpack")
     col2.image("../pictures/backpack.png")
+    st.divider()
     col3, col4, col5 = st.columns((4, 1, 2))
     with col3:
         st.image("../pictures/backpack_items_all.png")

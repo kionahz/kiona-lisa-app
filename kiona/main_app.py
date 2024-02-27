@@ -1,7 +1,7 @@
 import streamlit as st
 # import streamlit.components.v1 as components
 from src.helpers import sidebar_color
-from src.map import render_map_1, render_map_2, render_map_3, render_map_4, render_map_5, render_map_6
+from src.map import render_map_1, render_map_2, render_map_3, render_map_4, render_map_5, render_map_6, render_map_7
 from src.backpack import render_backpack_1, render_backpack_2, render_backpack_3, render_backpack_4
 from src.introduction import render_introduction
 from src.eisenhower_q1 import render_eisenhower_q1
@@ -65,36 +65,38 @@ if start:
 
     if st.session_state.place == "introduction":
         render_introduction()
-    elif st.session_state.place == "eisenhower_q1":
-        render_eisenhower_q1()
     elif st.session_state.place == "map_1":
         render_map_1()
-    elif st.session_state.place == "eisenhower_method":
-        render_eisenhower_method()
+    elif st.session_state.place == "eisenhower_q1":
+        render_eisenhower_q1()
     elif st.session_state.place == "map_2":
         render_map_2()
-    elif st.session_state.place == "eisenhower_q2":
-        render_eisenhower_q2()
+    elif st.session_state.place == "eisenhower_method":
+        render_eisenhower_method()
     elif st.session_state.place == "map_3":
         render_map_3()
+    elif st.session_state.place == "eisenhower_q2":
+        render_eisenhower_q2()
+    elif st.session_state.place == "map_4":
+        render_map_4()
     elif st.session_state.place == "backpack_1":
         render_backpack_1()
     elif st.session_state.place == "cornell_method":
         render_cornell_method()
-    elif st.session_state.place == "map_4":
-        render_map_4()
+    elif st.session_state.place == "map_5":
+        render_map_5()
     elif st.session_state.place == "backpack_2":
         render_backpack_2()
     elif st.session_state.place == "blurting_method":
         render_blurting_method()
-    elif st.session_state.place == "map_5":
-        render_map_5()
+    elif st.session_state.place == "map_6":
+        render_map_6()
     elif st.session_state.place == "backpack_3":
         render_backpack_3()
     elif st.session_state.place == "pomodoro_method":
         render_pomodoro_method()
-    elif st.session_state.place == "map_6":
-        render_map_6()
+    elif st.session_state.place == "map_7":
+        render_map_7()
     elif st.session_state.place == "backpack_4":
         render_backpack_4()
     elif st.session_state.place == "sail_away":

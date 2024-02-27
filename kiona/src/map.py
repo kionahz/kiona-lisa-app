@@ -2,7 +2,7 @@ import streamlit as st
 
 
 def render_map_1():
-    col1, col2 = st.columns((5, 3))
+    col1, col2 = st.columns((5, 3), gap='large')
     with col1:
         st.image("../pictures/island_01.png")
     with col2:
@@ -26,15 +26,11 @@ def render_map_1():
 
 
 def render_map_2():
-    col1, col2 = st.columns((5, 1))
-    col1.title("The Map")
-    col2.image("../pictures/logo.png")
-    st.divider()
-    col3, col4, col5 = st.columns((4, 1, 2))
-    with col3:
+    col1, col2 = st.columns((5, 3), gap='large')
+    with col1:
         st.image("../pictures/island_02.png")
-    with col5:
-        st.markdown("empty")
+    with col2:
+        st.image("../pictures/shelly_with_backpack.png", width=300)
 
     cola, colb = st.columns((8, 1))
     with colb:
@@ -45,15 +41,11 @@ def render_map_2():
 
 
 def render_map_3():
-    col1, col2 = st.columns((5, 1))
-    col1.title("The Map")
-    col2.image("../pictures/logo.png")
-    st.divider()
-    col3, col4, col5 = st.columns((4, 1, 2))
-    with col3:
+    col1, col2 = st.columns((5, 3), gap='large')
+    with col1:
         st.image("../pictures/island_03.png")
-    with col5:
-        st.markdown("empty")
+    with col2:
+        st.image("../pictures/shelly_with_backpack.png", width=300)
 
     cola, colb = st.columns((8, 1))
     with colb:
@@ -64,15 +56,11 @@ def render_map_3():
 
 
 def render_map_4():
-    col1, col2 = st.columns((5, 1))
-    col1.title("The Map")
-    col2.image("../pictures/logo.png")
-    st.divider()
-    col3, col4, col5 = st.columns((4, 1, 2))
-    with col3:
+    col1, col2 = st.columns((5, 3), gap='large')
+    with col1:
         st.image("../pictures/island_04.png")
-    with col5:
-        st.markdown("empty")
+    with col2:
+        st.image("../pictures/shelly_with_backpack.png", width=300)
 
     cola, colb = st.columns((8, 1))
     with colb:
@@ -87,15 +75,11 @@ def render_map_4():
 
 
 def render_map_5():
-    col1, col2 = st.columns((5, 1))
-    col1.title("The Map")
-    col2.image("../pictures/logo.png")
-    st.divider()
-    col3, col4, col5 = st.columns((4, 1, 2))
-    with col3:
+    col1, col2 = st.columns((5, 3), gap='large')
+    with col1:
         st.image("../pictures/island_05.png")
-    with col5:
-        st.markdown("empty")
+    with col2:
+        st.image("../pictures/shelly_with_backpack.png", width=300)
 
     cola, colb = st.columns((8, 1))
     with colb:
@@ -110,15 +94,11 @@ def render_map_5():
 
 
 def render_map_6():
-    col1, col2 = st.columns((5, 1))
-    col1.title("The Map")
-    col2.image("../pictures/logo.png")
-    st.divider()
-    col3, col4, col5 = st.columns((4, 1, 2))
-    with col3:
+    col1, col2 = st.columns((5, 3), gap='large')
+    with col1:
         st.image("../pictures/island_06.png")
-    with col5:
-        st.markdown("empty")
+    with col2:
+        st.image("../pictures/shelly_with_backpack.png", width=300)
 
     cola, colb = st.columns((8, 1))
     with colb:
@@ -133,15 +113,11 @@ def render_map_6():
 
 
 def render_map_7():
-    col1, col2 = st.columns((5, 1))
-    col1.title("The Map")
-    col2.image("../pictures/logo.png")
-    st.divider()
-    col3, col4, col5 = st.columns((4, 1, 2))
-    with col3:
-        st.image("../pictures/island_07.png")
-    with col5:
-        st.markdown("empty")
+    col1, col2 = st.columns((5, 3), gap='large')
+    with col1:
+        st.image("../pictures/island_06.png")
+    with col2:
+        st.image("../pictures/shelly_with_backpack.png", width=300)
 
     cola, colb = st.columns((8, 1))
     with colb:

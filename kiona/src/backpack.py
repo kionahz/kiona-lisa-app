@@ -2,7 +2,7 @@ import streamlit as st
 
 
 def render_backpack_1():
-    col1, col2 = st.columns((5, 3))
+    col1, col2 = st.columns((5, 3), gap='large')
     with col1:
         st.image("../pictures/backpack_items_1.png")
     with col2:
@@ -14,7 +14,7 @@ def render_backpack_1():
         )
         st.image("../pictures/shelly_without.png")
 
-    cola, colb = st.columns((10, 1))
+    cola, colb = st.columns((8, 1))
     with colb:
         if st.button("Next Quest"):
             st.session_state.place = "cornell_method"
@@ -22,7 +22,7 @@ def render_backpack_1():
 
 
 def render_backpack_2():
-    col1, col2 = st.columns((5, 3))
+    col1, col2 = st.columns((5, 3), gap='large')
     with col1:
         st.image("../pictures/backpack_items_2.png")
     with col2:
@@ -34,7 +34,7 @@ def render_backpack_2():
             unsafe_allow_html=True
         )
 
-    cola, colb = st.columns((10, 1))
+    cola, colb = st.columns((8, 1))
     with colb:
         if st.button("Next Quest"):
             st.session_state.place = "blurting_method"
@@ -42,7 +42,7 @@ def render_backpack_2():
 
 
 def render_backpack_3():
-    col1, col2 = st.columns((5, 3))
+    col1, col2 = st.columns((5, 3), gap='large')
     with col1:
         st.image("../pictures/backpack_items_3.png")
     with col2:
@@ -52,7 +52,7 @@ def render_backpack_3():
             unsafe_allow_html=True
         )
 
-    cola, colb = st.columns((10, 1))
+    cola, colb = st.columns((8, 1))
     with colb:
         if st.button("Next Quest"):
             st.session_state.place = "pomodoro_method"
@@ -60,7 +60,7 @@ def render_backpack_3():
 
 
 def render_backpack_4():
-    col1, col2 = st.columns((5, 3))
+    col1, col2 = st.columns((5, 3), gap='large')
     with col1:
         st.image("../pictures/backpack_items_4.png")
     with col2:

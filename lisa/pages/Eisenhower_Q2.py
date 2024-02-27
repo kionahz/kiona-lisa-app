@@ -1,7 +1,7 @@
 import streamlit as st
 
 
-def Eisenhower_quest2():
+def render_eisenhower_method():
     initial_sidebar_state = "collapsed"
     st.title("Eisenhower Matrix")
     tab_titles = ["Eisenhower Matrix", "(1) Do", "(2) Schedule", "(3) Delegate", "(4) Delete", "Did you know?"]

@@ -12,5 +12,4 @@ def sidebar_color():
     """, unsafe_allow_html=True)
 
 
-# def temp_clear():
-#     st.session_state["temp"] = ""
+

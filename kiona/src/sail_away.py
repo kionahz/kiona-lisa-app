@@ -28,6 +28,9 @@ def render_sail_away():
     with col4:
         st.image("../pictures/ship.png")
     with col5:
+        autoplay_audio("../audio/Orinoco-Flow.mp3")
+
+    cola, colb = st.columns((8, 1))
+    with colb:
         if st.button("Thanks for playing!"):
             st.balloons()
-        autoplay_audio("../audio/Orinoco-Flow.mp3")

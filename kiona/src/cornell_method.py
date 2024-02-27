@@ -18,8 +18,9 @@ def render_cornell_method():
         with col3:
             st.markdown("test")
 
+        cola, colb = st.columns((8, 1))
+        with colb:
             # button to start the next quest
             if st.button("View map"):
-                st.session_state["temp"] = ""
                 st.session_state.place = "map_5"
                 st.rerun()

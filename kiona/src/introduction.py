@@ -12,12 +12,14 @@ def render_introduction():
     with col3:
         st.markdown(
             f""" <br><br><br><p style="line-height:130%; font-size:2vw; color:white">AHOI 
-            {st.session_state.player_name} ⛵️</p>
+            {st.session_state.player_name}! ⛵️</p>
             <p style="line-height:130%; font-size: 1.5vw; color: white">I am Productivishelly,
             I will join you on your journey to better time management and show you different methods!
             You can click on the tabs above my head to check out how to start the game. I'll see you there!</p>""",
             unsafe_allow_html=True
         )
+    cola, colb = st.columns((8, 1))
+    with colb:
         # button to start the next quest
         if st.button("View Map"):
             st.session_state["temp"] = ""

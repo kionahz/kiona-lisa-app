@@ -94,9 +94,10 @@ def render_eisenhower_method():
                 unsafe_allow_html=True
             )
 
+        cola, colb = st.columns((8, 1))
+        with colb:
             # button to start the next quest
             if st.button("View map"):
-                st.session_state["temp"] = ""
                 st.session_state.place = "map_3"
                 st.rerun()
 

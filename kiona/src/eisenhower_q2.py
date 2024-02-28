@@ -7,9 +7,8 @@ def render_eisenhower_q2():
              "Watch the Sunset", "Search for drinking water", "Search for Food", "Build a Weapon",
              "Explore the surroundings"]
 
-    col_title, col_img = st.columns((2, 1))
-
-    with col_title:
+    col_1, col_2 = st.columns((2, 1))
+    with col_1:
         st.title("Now it's your turn!")
         st.markdown(
             f""" <p style="line-height:130%; font-size: 1.5vw; color: white">Now you know everything about the 
@@ -18,59 +17,57 @@ def render_eisenhower_q2():
                 Eisenhower matrix with the multi selects.</p>""",
             unsafe_allow_html=True
         )
-
-    with col_img:
+    with col_2:
         st.image("../pictures/em_empty.png")
 
     st.divider()
 
-    task_column, sel_urgent_important, sel_noturgent_notimportant = st.columns((2, 3, 3))
-
-    with task_column:
-
-        with st.expander(label="Here to see your tasks again", expanded=True):
+    col3, col4, col5 = st.columns((2, 3, 3))
+    with col3:
+        with st.expander(label="Here you can see your tasks again", expanded=True):
             st.markdown(f""" 
                 <p style="line-height:150%; font-size: 1.1vw; color: white">· Build a Fire<br>· Collect Shells<br>· Build a 
                 shelter<br>· Search for Food<br>· Build a Weapon<br>· Collect Wood<br>· Watch the Sunset<br>· Search for 
                 drinking water<br>· Explore the surroundings<br>· Search for a container (for food or water)</p>""",
                         unsafe_allow_html=True)
 
-    with sel_urgent_important:
+    with col4:
         st.subheader("Urgent/Important")
-
         # Create the multi-select box
-        selections_urgent_important = st.multiselect("Urgent/Important", tasks.copy(), label_visibility="hidden")
-        st.write(selections_urgent_important)
+        selection_1 = st.multiselect("Urgent/Important", tasks.copy, label_visibility="hidden")
+        st.write(selection_1)
+
         st.subheader("Urgent/Not Important")
         # Remove the tasks selected in the first multi-select box
         tasks_copy = tasks.copy()
-        for task in selections_urgent_important:
+        for task in selection_1:
             tasks_copy.remove(task)
-        selections_urgent_notimportant = st.multiselect("Urgent/Not Important", tasks_copy, label_visibility="hidden")
-        st.write(selections_urgent_notimportant)
+        selection_3 = st.multiselect("Urgent/Not Important", tasks_copy, label_visibility="hidden")
+        st.write(selection_3)
 
-    with sel_noturgent_notimportant:
+    with col5:
         st.subheader("Not Urgent/Important")
         # Remove the tasks selected in the first two multi-select boxes
         tasks_copy = tasks.copy()
-        for task in selections_urgent_important:
+        for task in selection_1:
             tasks_copy.remove(task)
-        for task in selections_urgent_notimportant:
+        for task in selection_3:
             tasks_copy.remove(task)
-        selections_noturgent_important = st.multiselect("Not Urgent/Important", tasks_copy, label_visibility="hidden")
-        st.write(selections_noturgent_important)
+        selection_2 = st.multiselect("Not Urgent/Important", tasks_copy, label_visibility="hidden")
+        st.write(selection_2)
+
         st.subheader("Not Urgent/Not Important")
         # Remove the tasks selected in all multi-select boxes
         tasks_copy = tasks.copy()
-        for task in selections_urgent_important:
+        for task in selection_1:
             tasks_copy.remove(task)
-        for task in selections_urgent_notimportant:
+        for task in selection_3:
             tasks_copy.remove(task)
-        for task in selections_noturgent_important:
+        for task in selection_2:
             tasks_copy.remove(task)
-        selections_noturgent_notimportant = st.multiselect("Not Urgent/Not Important", tasks_copy,
+        selection_4 = st.multiselect("Not Urgent/Not Important", tasks_copy,
                                                            label_visibility="hidden")
-        st.write(selections_noturgent_notimportant)
+        st.write(selection_4)
 
     cola, colb = st.columns((8, 1))
     with colb:

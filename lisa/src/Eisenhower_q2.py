@@ -30,7 +30,7 @@ def render_eisenhower_q2():
 
     with task_column:
 
-        with st.expander(label="Click here to see your tasks again", expanded=True):
+        with st.expander(label="Here to see your tasks again", expanded=True):
             st.markdown(f""" 
             <p style="line-height:150%; font-size: 1.1vw; color: white">· Build a Fire<br>· Collect Shells<br>· Build a 
             shelter<br>· Search for Food<br>· Build a Weapon<br>· Collect Wood<br>· Watch the Sunset<br>· Search for 
@@ -74,8 +74,9 @@ def render_eisenhower_q2():
                                                            label_visibility="hidden")
         st.write(selections_noturgent_notimportant)
 
-    # button to start the next quest
-    if st.button("View map"):
-        st.session_state["temp"] = ""
-        st.session_state.place = "map_4"
-        st.rerun()
+    cola, colb = st.columns((8, 1))
+    with colb:
+        # button to start the next quest
+        if st.button("View map"):
+            st.session_state.place = "map_4"
+            st.rerun()

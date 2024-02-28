@@ -6,7 +6,7 @@ def render_introduction():
     col1.title("PIERATS - Productivity Island Expedition")
     col2.image("../pictures/logo.png")
 
-    col1, col2, col3, col4 = st.columns((1, 4, 4, 1))
+    col1, col2, col3, col4 = st.columns((1, 4, 4, 1), gap="small")
     with col2:
         st.image("../pictures/shelly_speech.png")
     with col3:
@@ -18,6 +18,8 @@ def render_introduction():
             unsafe_allow_html=True
         )
 
+    cola, colb = st.columns((8, 1))
+    with colb:
         # button to start the next quest
         if st.button("View Map"):
             st.session_state["temp"] = ""

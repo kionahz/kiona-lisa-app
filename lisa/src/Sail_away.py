@@ -21,13 +21,16 @@ def autoplay_audio(file_path: str):
 
 def render_sail_away():
     col1, col2 = st.columns((1, 5))
-    col1.image("../pictures/shelly.png", width=120)
+    col1.image("../pictures/shelly.png")
     col2.title("Well done Sailor! You can now call yourself CAPTAIN PRODUCTIVITY!!! Sail home safely!")
 
     col3, col4, col5= st.columns((1, 5, 2))
     with col4:
         st.image("../pictures/ship.png")
     with col5:
+        autoplay_audio("../audio/Orinoco-Flow.mp3")
+
+    cola, colb = st.columns((8, 1))
+    with colb:
         if st.button("Thanks for playing!"):
             st.balloons()
-        autoplay_audio("../audio/Orinoco-Flow.mp3")

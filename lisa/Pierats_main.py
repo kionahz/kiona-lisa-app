@@ -39,10 +39,10 @@ if "place" not in st.session_state:
 col1, col2, col3 = st.columns((1, 4, 1))
 with col2:
     logo = st.image("../pictures/logo_banner.png")
-    welcome = st.empty()
-    welcome.markdown(f""" <p style="font-family: serif; font-size:3vw; color:white; 
+    # welcome = st.empty()
+    welcome = st.markdown(f""" <p style="font-family: serif; font-size:3vw; color:white; 
     text-align:center;"><strong>Welcome to PIERATS<br>the Productivity Island Expedition!</strong></p>""",
-                     unsafe_allow_html=True)
+                          unsafe_allow_html=True)
 
     divider = st.divider()
 
@@ -50,11 +50,13 @@ with col2:
     you ready for your adventure?<br>Let me know your name and hit enter to start the game</p>""",
                              unsafe_allow_html=True)
     player_name_container = st.empty()
+
     player_name_container.text_input(
         "Text Input", key="player_name",
         label_visibility="hidden"
     )
-    main_text_container = st.empty()
+
+
 
 col4, col5, col6 = st.columns((1, 4, 1))
 with col5:
@@ -64,7 +66,6 @@ if st.session_state.player_name != "":
     welcome.empty()
     divider.empty()
     input_text.empty()
-    main_text_container.empty()
     player_name_container.empty()
     logo.empty()
 
@@ -213,23 +214,9 @@ if start:
         st.sidebar.markdown("Pomodoro Method")
         st.sidebar.markdown("Sail Away")
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#if "counter" not in st.session_state:
+# if "counter" not in st.session_state:
 #    st.session_state["counter"] = 0
-#if "scenes_counter" not in st.session_state:
+# if "scenes_counter" not in st.session_state:
 #    st.session_state["scenes_counter"] = {
 #        "intro_counter": 0,
 #        "cave_counter": 0,
@@ -241,7 +228,7 @@ if start:
 # this part of the code focuses input on text window
 # please note that counter is required - for streamlit specific it does not work without it
 
-#components.html(
+# components.html(
 #    f"""
 #        <div>some hidden container</div>
 #        <p>{st.session_state.counter}</p>
@@ -253,12 +240,11 @@ if start:
 #    </script>
 #    """,
 #    height=0,
-#)
+# )
 
-#hide_streamlit_style = """
+# hide_streamlit_style = """
 #            <style>
 #            footer {visibility: hidden;}
 #            </style>
 #            """
-#st.markdown(hide_streamlit_style, unsafe_allow_html=True)
-
+# st.markdown(hide_streamlit_style, unsafe_allow_html=True)

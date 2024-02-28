@@ -58,7 +58,6 @@ with col2:
     )
 
 
-
 col4, col5, col6 = st.columns((1, 4, 1))
 with col5:
     st.text("")

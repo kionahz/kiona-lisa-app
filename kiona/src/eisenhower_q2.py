@@ -33,40 +33,24 @@ def render_eisenhower_q2():
 
     with col4:
         st.subheader("Urgent/Important")
-        # Create the multi-select box
-        selection_1 = st.multiselect("Urgent/Important", tasks.copy, label_visibility="hidden")
+        selection_1 = st.multiselect("Urgent/Important", tasks, placeholder="Choose one or multiple options",
+                                     label_visibility="collapsed")
         st.write(selection_1)
 
         st.subheader("Urgent/Not Important")
-        # Remove the tasks selected in the first multi-select box
-        tasks_copy = tasks.copy()
-        for task in selection_1:
-            tasks_copy.remove(task)
-        selection_3 = st.multiselect("Urgent/Not Important", tasks_copy, label_visibility="hidden")
+        selection_3 = st.multiselect("Urgent/Not Important", tasks, placeholder="Choose one or multiple options",
+                                     label_visibility="collapsed")
         st.write(selection_3)
 
     with col5:
         st.subheader("Not Urgent/Important")
-        # Remove the tasks selected in the first two multi-select boxes
-        tasks_copy = tasks.copy()
-        for task in selection_1:
-            tasks_copy.remove(task)
-        for task in selection_3:
-            tasks_copy.remove(task)
-        selection_2 = st.multiselect("Not Urgent/Important", tasks_copy, label_visibility="hidden")
+        selection_2 = st.multiselect("Not Urgent/Important", tasks, placeholder="Choose one or multiple options",
+                                     label_visibility="collapsed")
         st.write(selection_2)
 
         st.subheader("Not Urgent/Not Important")
-        # Remove the tasks selected in all multi-select boxes
-        tasks_copy = tasks.copy()
-        for task in selection_1:
-            tasks_copy.remove(task)
-        for task in selection_3:
-            tasks_copy.remove(task)
-        for task in selection_2:
-            tasks_copy.remove(task)
-        selection_4 = st.multiselect("Not Urgent/Not Important", tasks_copy,
-                                                           label_visibility="hidden")
+        selection_4 = st.multiselect("Not Urgent/Not Important", tasks, lplaceholder="Choose one or multiple options",
+                                     label_visibility="collapsed")
         st.write(selection_4)
 
     cola, colb = st.columns((8, 1))

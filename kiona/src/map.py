@@ -19,9 +19,8 @@ def render_map_1():
 
     cola, colb = st.columns((8, 1))
     with colb:
-        # button to start the next quest
-        if st.button("Next Quest"):
-            st.session_state.place = "eisenhower_q1"
+        if st.button("View Backpack"):
+            st.session_state.place = "backpack_empty"
             st.rerun()
 
 
@@ -34,9 +33,8 @@ def render_map_2():
 
     cola, colb = st.columns((8, 1))
     with colb:
-        # button to start the next quest
-        if st.button("Explanation Method"):
-            st.session_state.place = "eisenhower_method"
+        if st.button("View Backpack"):
+            st.session_state.place = "backpack_1"
             st.rerun()
 
 
@@ -49,9 +47,8 @@ def render_map_3():
 
     cola, colb = st.columns((8, 1))
     with colb:
-        # button to start the next quest
-        if st.button("Next Quest"):
-            st.session_state.place = "eisenhower_q2"
+        if st.button("View Backpack"):
+            st.session_state.place = "backpack_2"
             st.rerun()
 
 
@@ -64,13 +61,8 @@ def render_map_4():
 
     cola, colb = st.columns((8, 1))
     with colb:
-        # button to show the backpack
         if st.button("View Backpack"):
-            st.session_state.place = "backpack_1"
-            st.rerun()
-        # button to start the next quest
-        if st.button("Next Quest"):
-            st.session_state.place = "cornell_method"
+            st.session_state.place = "backpack_3"
             st.rerun()
 
 
@@ -83,13 +75,8 @@ def render_map_5():
 
     cola, colb = st.columns((8, 1))
     with colb:
-        # button to start the next quest
         if st.button("View Backpack"):
-            st.session_state.place = "backpack_2"
-            st.rerun()
-        # button to start the next quest
-        if st.button("Next Quest"):
-            st.session_state.place = "blurting_method"
+            st.session_state.place = "backpack_4"
             st.rerun()
 
 
@@ -104,18 +91,14 @@ def render_map_6():
     with colb:
         # button to start the next quest
         if st.button("View Backpack"):
-            st.session_state.place = "backpack_3"
-            st.rerun()
-        # button to start the next quest
-        if st.button("Next Quest"):
-            st.session_state.place = "pomodoro_method"
+            st.session_state.place = "backpack_5"
             st.rerun()
 
 
 def render_map_7():
     col1, col2 = st.columns((5, 3), gap='large')
     with col1:
-        st.image("../pictures/island_06.png")
+        st.image("../pictures/island_07.png")
     with col2:
         st.image("../pictures/shelly_with_backpack.png", width=300)
 
@@ -123,5 +106,35 @@ def render_map_7():
     with colb:
         # button to start the next quest
         if st.button("View Backpack"):
-            st.session_state.place = "backpack_4"
+            st.session_state.place = "backpack_6"
+            st.rerun()
+
+
+def render_map_8():
+    col1, col2 = st.columns((5, 3), gap='large')
+    with col1:
+        st.image("../pictures/island_08.png")
+    with col2:
+        st.image("../pictures/shelly_with_backpack.png", width=300)
+
+    cola, colb = st.columns((8, 1))
+    with colb:
+        # button to start the next quest
+        if st.button("View Backpack"):
+            st.session_state.place = "backpack_7"
+            st.rerun()
+
+
+def render_map_9():
+    col1, col2 = st.columns((5, 3), gap='large')
+    with col1:
+        st.image("../pictures/island_09.png")
+    with col2:
+        st.image("../pictures/shelly_with_backpack.png", width=300)
+
+    cola, colb = st.columns((8, 1))
+    with colb:
+        # button to start the next quest
+        if st.button("View Backpack"):
+            st.session_state.place = "backpack_8"
             st.rerun()

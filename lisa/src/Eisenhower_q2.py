@@ -17,9 +17,10 @@ def render_eisenhower_q2():
             f""" <p style="line-height:130%; font-size: 1.5vw; color: white">Now you know everything about the 
             Eisenhower matrix. Let's try to arrange your tasks on what you can do to escape the island once again. Do 
             you think you can do it like Eisenhower? Select the task you would like to sort into your very own 
-            Eisenhower matrix with the multi-selects.</p>""",
+            Eisenhower matrix with the multi-selects.<br>Click <i>Continue</i> on the bottom once you are happy with your 
+            selections.</p>""",
             unsafe_allow_html=True
-        )
+        )  # TODO
 
     with col_img:
         st.image("../pictures/em_empty.png")
@@ -77,6 +78,6 @@ def render_eisenhower_q2():
     cola, colb = st.columns((8, 1))
     with colb:
         # button to start the next quest
-        if st.button("View map"):
+        if st.button("Continue"): # TODO
             st.session_state.place = "map_4"
             st.rerun()

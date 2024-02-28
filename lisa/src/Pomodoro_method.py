@@ -31,6 +31,6 @@ def render_pomodoro_method():
         cola, colb = st.columns((10, 1))
         with colb:
             # button to start the next quest
-            if st.button("View map"):
+            if st.button("Continue"):  # TODO
                 st.session_state.place = "map_8"
                 st.rerun()

@@ -22,6 +22,6 @@ def render_blurting_method():
         cola, colb = st.columns((8, 1))
         with colb:
             # button to start the next quest
-            if st.button("View map"):
+            if st.button("Continue"):  # TODO
                 st.session_state.place = "map_6"
                 st.rerun()

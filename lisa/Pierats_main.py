@@ -45,8 +45,8 @@ with col2:
 
     divider = st.divider()
 
-    input_text = st.markdown(f"""<p style="line-height:130%; font-size: 1.5vw; color: white; text-align:center">Are 
-    you ready for your adventure?<br>Let me know your name and hit enter to start the game:</p>""",  # TODO ":"
+    input_text = st.markdown(f"""<p style="line-height:160%; font-size: 1.5vw; color: white; text-align:center">Are 
+    you ready for your adventure?<br>Let me know your name and hit enter to start the game:</p>""",  # TODO ":" & line height 160%
                              unsafe_allow_html=True)
     player_name_container = st.empty()
 

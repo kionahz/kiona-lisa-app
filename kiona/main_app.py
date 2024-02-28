@@ -14,8 +14,7 @@ from src.pomodoro_q1 import render_pomodoro_q1
 from src.pomodoro_method import render_pomodoro_method
 from src.pomodoro_q2 import render_pomodoro_q2
 from src.sail_away import render_sail_away
-
-# Todo delete all commented out stuff at the bottom!!!
+from src.exit import render_exit  # TODO
 
 
 st.set_page_config(
@@ -299,3 +298,5 @@ if start:
         st.sidebar.markdown("Pomodoro Method")
         st.sidebar.markdown("Pomodoro Applied")
         st.sidebar.markdown("Sail Away")
+    elif st.session_state.place == "exit":  # TODO
+        render_exit()

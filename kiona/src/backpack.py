@@ -52,6 +52,7 @@ def render_backpack_2():
             up the good work!</p>""",
             unsafe_allow_html=True
         )
+        st.image("../pictures/shelly_without.png")  # TODO
 
     cola, colb = st.columns((8, 1))
     with colb:
@@ -71,6 +72,7 @@ def render_backpack_3():
             easy to hammer down the nails.<br><br>Don't stop now, you are almost there!</p>""",
             unsafe_allow_html=True
         )
+        st.image("../pictures/shelly_without.png")  # TODO
 
     cola, colb = st.columns((8, 1))
     with colb:
@@ -90,6 +92,7 @@ def render_backpack_4():
             size.<br><br>Way to go!</p>""",
             unsafe_allow_html=True
         )
+        st.image("../pictures/shelly_without.png")  # TODO
 
     cola, colb = st.columns((8, 1))
     with colb:
@@ -109,6 +112,7 @@ def render_backpack_5():
             really becoming a pro.</p>""",
             unsafe_allow_html=True
         )
+        st.image("../pictures/shelly_without.png")  # TODO
 
     cola, colb = st.columns((8, 1))
     with colb:
@@ -128,6 +132,7 @@ def render_backpack_6():
             your new sails.<br><br>You are nearly there!</p>""",
             unsafe_allow_html=True
         )
+        st.image("../pictures/shelly_without.png")  # TODO
 
     cola, colb = st.columns((8, 1))
     with colb:
@@ -147,6 +152,7 @@ def render_backpack_7():
                     sails.<br><br>Only one more quest to go. You can do it!</p>""",
             unsafe_allow_html=True
         )
+        st.image("../pictures/shelly_without.png")  # TODO
 
     cola, colb = st.columns((8, 1))
     with colb:
@@ -166,6 +172,7 @@ def render_backpack_8():
             pretty<br><br>Good work. You boat is now finally completely repaid and you can sail away with it!</p>""",
             unsafe_allow_html=True
         )
+        st.image("../pictures/shelly_without.png")  # TODO
 
     cola, colb = st.columns((8, 1))
     with colb:

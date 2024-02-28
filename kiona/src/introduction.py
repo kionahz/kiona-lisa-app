@@ -24,9 +24,7 @@ def render_introduction():
         )
     cola, colb = st.columns((8, 1))
     with colb:
-        # button to start the next quest
         if st.button("View Map"):
-            st.session_state["temp"] = ""
             st.session_state.place = "map_1"
             st.rerun()
 

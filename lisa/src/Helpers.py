@@ -1,7 +1,6 @@
 import streamlit as st
 
 
-
 # change background color of the sidebar
 def sidebar_color():
     st.markdown("""

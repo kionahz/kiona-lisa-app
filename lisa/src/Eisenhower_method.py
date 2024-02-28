@@ -1,7 +1,16 @@
 import streamlit as st
-
+import time
+# TODO copy all as is
 
 def render_eisenhower_method():
+    st.sidebar.progress(20)
+
+    st.sidebar.markdown(f"""
+    <p style="line-height: 100%; font-size: 1.1vw;">Introduction</p>
+    <p style="line-height: 100%; font-size: 1.1vw;">Eisenhower First Try</p>
+        <p style="line-height: 100%; font-size: 1.3vw;"><strong>Eisenhower Method</strong></p>
+    """, unsafe_allow_html=True)
+
     st.title("Eisenhower Matrix")
     tab_titles = ["Eisenhower Matrix", "(1) Do", "(2) Schedule", "(3) Delegate", "(4) Delete", "Did you know?"]
     tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs(tab_titles)

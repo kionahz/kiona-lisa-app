@@ -1,7 +1,16 @@
 import streamlit as st
 
+# TODO copy all as is
+
 
 def render_backpack_empty():
+    st.sidebar.progress(10)
+
+    st.sidebar.markdown(f"""
+        <p style="line-height: 100%; font-size: 1.1vw;">Introduction</p>
+        <p style="padding-left: 30px; line-height:100%; font-size: 1.2vw;"><strong>Backpack</strong></p>
+    """, unsafe_allow_html=True)
+
     col1, col2 = st.columns((5, 3), gap='large')
     with col1:
         st.image("../pictures/backpack_items_empty.png")
@@ -23,6 +32,14 @@ def render_backpack_empty():
 
 
 def render_backpack_1():
+    st.sidebar.progress(20)
+
+    st.sidebar.markdown(f"""
+            <p style="line-height: 100%; font-size: 1.1vw;">Introduction</p>
+            <p style="line-height: 100%; font-size: 1.1vw;">First Quest</p>
+            <p style="padding-left: 30px; line-height:100%; font-size: 1.3vw;"><strong>Backpack</strong></p>
+        """, unsafe_allow_html=True)
+
     col1, col2 = st.columns((5, 3), gap='large')
     with col1:
         st.image("../pictures/backpack_items_1.png")
@@ -43,6 +60,15 @@ def render_backpack_1():
 
 
 def render_backpack_2():
+    st.sidebar.progress(30)
+
+    st.sidebar.markdown(f"""
+                <p style="line-height: 100%; font-size: 1.1vw;">Introduction</p>
+                <p style="line-height: 100%; font-size: 1.1vw;">Eisenhower First Try</p>
+                <p style="line-height: 100%; font-size: 1.1vw;">Eisenhower Method</p>
+                <p style="padding-left: 30px; line-height:100%; font-size: 1.3vw;"><strong>Backpack</strong></p>
+            """, unsafe_allow_html=True)
+
     col1, col2 = st.columns((5, 3), gap='large')
     with col1:
         st.image("../pictures/backpack_items_2.png")
@@ -63,6 +89,16 @@ def render_backpack_2():
 
 
 def render_backpack_3():
+    st.sidebar.progress(40)
+
+    st.sidebar.markdown(f"""
+                <p style="line-height: 100%; font-size: 1.1vw;">Introduction</p>
+                <p style="line-height: 100%; font-size: 1.1vw;">Eisenhower First Try</p>
+                <p style="line-height: 100%; font-size: 1.1vw;">Eisenhower Method</p>
+                <p style="line-height: 100%; font-size: 1.1vw;">Eisenhower Applied</p>
+                <p style="padding-left: 30px; line-height:100%; font-size: 1.3vw;"><strong>Backpack</strong></p>
+            """, unsafe_allow_html=True)
+
     col1, col2 = st.columns((5, 3), gap='large')
     with col1:
         st.image("../pictures/backpack_items_3.png")
@@ -83,6 +119,17 @@ def render_backpack_3():
 
 
 def render_backpack_4():
+    st.sidebar.progress(50)
+
+    st.sidebar.markdown(f"""
+                <p style="line-height: 100%; font-size: 1.1vw;">Introduction</p>
+                <p style="line-height: 100%; font-size: 1.1vw;">Eisenhower First Try</p>
+                <p style="line-height: 100%; font-size: 1.1vw;">Eisenhower Method</p>
+                <p style="line-height: 100%; font-size: 1.1vw;">Eisenhower Applied</p>
+                <p style="line-height: 100%; font-size: 1.1vw;">Cornell Method</p>
+                <p style="padding-left: 30px; line-height:100%; font-size: 1.3vw;"><strong>Backpack</strong></p>
+            """, unsafe_allow_html=True)
+
     col1, col2 = st.columns((5, 3), gap='large')
     with col1:
         st.image("../pictures/backpack_items_4.png")
@@ -103,6 +150,18 @@ def render_backpack_4():
 
 
 def render_backpack_5():
+    st.sidebar.progress(60)
+
+    st.sidebar.markdown(f"""
+                <p style="line-height: 100%; font-size: 1.1vw;">Introduction</p>
+                <p style="line-height: 100%; font-size: 1.1vw;">Eisenhower First Try</p>
+                <p style="line-height: 100%; font-size: 1.1vw;">Eisenhower Method</p>
+                <p style="line-height: 100%; font-size: 1.1vw;">Eisenhower Applied</p>
+                <p style="line-height: 100%; font-size: 1.1vw;">Cornell Method</p>
+                <p style="line-height: 100%; font-size: 1.1vw;">Blurting Method</p>
+                <p style="padding-left: 30px; line-height:100%; font-size: 1.3vw;"><strong>Backpack</strong></p>
+            """, unsafe_allow_html=True)
+
     col1, col2 = st.columns((5, 3), gap='large')
     with col1:
         st.image("../pictures/backpack_items_5.png")
@@ -123,6 +182,19 @@ def render_backpack_5():
 
 
 def render_backpack_6():
+    st.sidebar.progress(70)
+
+    st.sidebar.markdown(f"""
+                <p style="line-height: 100%; font-size: 1.1vw;">Introduction</p>
+                <p style="line-height: 100%; font-size: 1.1vw;">Eisenhower First Try</p>
+                <p style="line-height: 100%; font-size: 1.1vw;">Eisenhower Method</p>
+                <p style="line-height: 100%; font-size: 1.1vw;">Eisenhower Applied</p>
+                <p style="line-height: 100%; font-size: 1.1vw;">Cornell Method</p>
+                <p style="line-height: 100%; font-size: 1.1vw;">Blurting Method</p>
+                <p style="line-height: 100%; font-size: 1.1vw;">Quest First Try</p>
+                <p style="padding-left: 30px; line-height:100%; font-size: 1.3vw;"><strong>Backpack</strong></p>
+            """, unsafe_allow_html=True)
+
     col1, col2 = st.columns((5, 3), gap='large')
     with col1:
         st.image("../pictures/backpack_items_6.png")
@@ -143,6 +215,20 @@ def render_backpack_6():
 
 
 def render_backpack_7():
+    st.sidebar.progress(80)
+
+    st.sidebar.markdown(f"""
+                <p style="line-height: 100%; font-size: 1.1vw;">Introduction</p>
+                <p style="line-height: 100%; font-size: 1.1vw;">Eisenhower First Try</p>
+                <p style="line-height: 100%; font-size: 1.1vw;">Eisenhower Method</p>
+                <p style="line-height: 100%; font-size: 1.1vw;">Eisenhower Applied</p>
+                <p style="line-height: 100%; font-size: 1.1vw;">Cornell Method</p>
+                <p style="line-height: 100%; font-size: 1.1vw;">Blurting Method</p>
+                <p style="line-height: 100%; font-size: 1.1vw;">Pomodoro First Try</p>
+                <p style="line-height: 100%; font-size: 1.1vw;">Pomodoro Method</p>
+                <p style="padding-left: 30px; line-height:100%; font-size: 1.3vw;"><strong>Backpack</strong></p>
+            """, unsafe_allow_html=True)
+
     col1, col2 = st.columns((5, 3), gap='large')
     with col1:
         st.image("../pictures/backpack_items_7.png")
@@ -163,6 +249,21 @@ def render_backpack_7():
 
 
 def render_backpack_8():
+    st.sidebar.progress(90)
+
+    st.sidebar.markdown(f"""
+            <p style="line-height: 100%; font-size: 1.1vw;">Introduction</p>
+            <p style="line-height: 100%; font-size: 1.1vw;">Eisenhower First Try</p>
+            <p style="line-height: 100%; font-size: 1.1vw;">Eisenhower Method</p>
+            <p style="line-height: 100%; font-size: 1.1vw;">Eisenhower Applied</p>
+            <p style="line-height: 100%; font-size: 1.1vw;">Cornell Method</p>
+            <p style="line-height: 100%; font-size: 1.1vw;">Blurting Method</p>
+            <p style="line-height: 100%; font-size: 1.1vw;">Pomodoro First Try</p>
+            <p style="line-height: 100%; font-size: 1.1vw;">Pomodoro Method</p>
+            <p style="line-height: 100%; font-size: 1.1vw;">Pomodoro Applied</p>
+            <p style="padding-left: 30px; line-height:100%; font-size: 1.3vw;"><strong>Backpack</strong></p>
+        """, unsafe_allow_html=True)
+
     col1, col2 = st.columns((5, 3), gap='large')
     with col1:
         st.image("../pictures/backpack_items_8.png")

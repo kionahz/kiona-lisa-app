@@ -1,10 +1,7 @@
 import streamlit as st
-import time
 from src.Helpers import sidebar_color
-from src.Map import (render_map_1, render_map_2, render_map_3, render_map_4, render_map_5, render_map_6, render_map_7,
-                     render_map_8, render_map_9)
-from src.Backpack import (render_backpack_empty, render_backpack_1, render_backpack_2, render_backpack_3,
-                          render_backpack_4, render_backpack_5, render_backpack_6, render_backpack_7, render_backpack_8)
+from src.Map import (render_map_1, render_map_2, render_map_3, render_map_4, render_map_5, render_map_6, render_map_7,render_map_8, render_map_9)
+from src.Backpack import (render_backpack_empty, render_backpack_1, render_backpack_2, render_backpack_3,render_backpack_4, render_backpack_5, render_backpack_6, render_backpack_7, render_backpack_8)
 from src.Introduction import render_introduction
 from src.Eisenhower_q1 import render_eisenhower_q1
 from src.Eisenhower_method import render_eisenhower_method
@@ -16,8 +13,6 @@ from src.Pomodoro_method import render_pomodoro_method
 from src.Pomodoro_q2 import render_pomodoro_q2
 from src.Sail_away import render_sail_away
 from src.Exit import render_exit
-
-# TODO: All done
 
 st.set_page_config(
     page_title="PIERATS - Productivity Island Expedition",
@@ -31,10 +26,6 @@ st.set_page_config(
 
 st.sidebar.image("../pictures/shelly_ahoi.png")
 sidebar_color()
-progress_0 = st.sidebar.progress(0)
-for percent_complete_0 in range(0):
-    time.sleep(0.01)
-    progress_0.progress(percent_complete_0)
 
 # variable responsible for checking if player provided his name and game can be started
 start = False
@@ -73,7 +64,6 @@ if st.session_state.player_name != "":
     input_text.empty()
     player_name_container.empty()
     logo.empty()
-    progress_0.empty()
 
     start = True
 
@@ -168,5 +158,5 @@ if start:
     elif st.session_state.place == "sail_away":
         render_sail_away()
 
-    elif st.session_state.place == "exit":
+    elif st.session_state.place == "exit":  # TODO
         render_exit()

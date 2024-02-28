@@ -100,5 +100,3 @@ def render_eisenhower_method():
             if st.button("View map"):
                 st.session_state.place = "map_3"
                 st.rerun()
-
-

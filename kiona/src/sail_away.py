@@ -24,7 +24,7 @@ def render_sail_away():
     col1.image("../pictures/shelly.png")
     col2.title("Well done Sailor! You can now call yourself CAPTAIN PRODUCTIVITY!!! Sail home safely!")
 
-    col3, col4, col5= st.columns((1, 5, 2))
+    col3, col4, col5 = st.columns((1, 5, 2))
     with col4:
         st.image("../pictures/ship.png")
     with col5:

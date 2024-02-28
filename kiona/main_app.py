@@ -24,8 +24,6 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="collapsed",
     menu_items={
-        'Get Help': 'https://www.extremelycoolapp.com/help',
-        'Report a bug': "https://www.extremelycoolapp.com/bug",
         'About': "# Kiona and Lisa's Game!"
     }
 )
@@ -42,29 +40,34 @@ if "place" not in st.session_state:
 
 col1, col2, col3 = st.columns((1, 4, 1))
 with col2:
-    welcome = st.empty()
-    welcome.title("Welcome to PIERATS the Productivity Island Expedition!")
+    logo = st.image("../pictures/logo_banner.png")
+    # welcome = st.empty()
+    welcome = st.markdown(f""" <p style="font-family: serif; font-size:3vw; color:white; 
+    text-align:center;"><strong>Welcome to PIERATS<br>the Productivity Island Expedition!</strong></p>""",
+                          unsafe_allow_html=True)
 
     divider = st.divider()
 
-    input_text = st.markdown(f"""<p style="line-height:130%; font-size: 1.5vw; color: white">If you are ready for 
-    this crazy adventure enter your name and hit enter to start the game</p>""", unsafe_allow_html=True)
+    input_text = st.markdown(f"""<p style="line-height:130%; font-size: 1.5vw; color: white; text-align:center">Are 
+    you ready for your adventure?<br>Let me know your name and hit enter to start the game</p>""",
+                             unsafe_allow_html=True)
     player_name_container = st.empty()
+
     player_name_container.text_input(
-        "If you are ready for this crazy adventure enter your name and hit enter to start the game", key="player_name",
+        "Text Input", key="player_name",
         label_visibility="hidden"
     )
-    main_text_container = st.empty()
 
-col4, col5, col6 = st.columns((1, 1, 1))
+
+
+col4, col5, col6 = st.columns((1, 4, 1))
 with col5:
-    logo = st.image("../pictures/logo.png")
+    st.text("")
 
 if st.session_state.player_name != "":
     welcome.empty()
     divider.empty()
     input_text.empty()
-    main_text_container.empty()
     player_name_container.empty()
     logo.empty()
 
@@ -296,40 +299,3 @@ if start:
         st.sidebar.markdown("Pomodoro Method")
         st.sidebar.markdown("Pomodoro Applied")
         st.sidebar.markdown("Sail Away")
-
-# if "temp" not in st.session_state:
-#    st.session_state["temp"] = ""
-# if "counter" not in st.session_state:
-#    st.session_state["counter"] = 0
-# if "scenes_counter" not in st.session_state:
-#    st.session_state["scenes_counter"] = {
-#        "intro_counter": 0,
-#        "cave_counter": 0,
-#        "trip_counter": 0,
-#        "elf_counter": 0,
-#    }
-
-
-# this part of the code focuses input on text window
-# please note that counter is required - for streamlit specific it does not work without it
-
-# components.html(
-#    f"""
-#        <div>some hidden container</div>
-#        <p>{st.session_state.counter}</p>
-#        <script>
-#            var input = window.parent.document.querySelectorAll("input[type=text]");
-#            for (var i = 0; i < input.length; ++i) {{
-#                input[i].focus();
-#            }}
-#    </script>
-#    """,
-#    height=0,
-# )
-
-# hide_streamlit_style = """
-#            <style>
-#            footer {visibility: hidden;}
-#            </style>
-#            """
-# st.markdown(hide_streamlit_style, unsafe_allow_html=True)

@@ -44,8 +44,10 @@ def render_cornell_method():
             st.markdown(
                 f""" <p style="line-height:130%; font-size:2vw; color:white">This is the Cornell Method</p> <p 
                 style="line-height:130%; font-size: 1.5vw; color: white">As I said, its great for organizing and 
-                understanding information better and keeping it structured.<br><br>First you have to divide your paper 
-                like you can see in the image in three main parts.</p>""",
+                understanding information better and keeping it structured.<br><br>First divide your paper into three 
+                sections. On the left side you have a narrow column for Keywords and Questions, the right side is for 
+                taking notes and a bottom part for a summary. At the top you can add a title and date so it is easier 
+                for you to associate your notes.</p>""",
                 unsafe_allow_html=True
             )
 

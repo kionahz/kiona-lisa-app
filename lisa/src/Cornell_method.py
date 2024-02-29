@@ -30,7 +30,7 @@ def render_cornell_method():
             st.image("../pictures/cornell.png")
 
         with col3:
-            st.markdown("Main Notes")
+            st.markdown("Notes")
 
     with tab3:
         col1, col2, col3, col4 = st.columns((1, 3, 4, 1))
@@ -38,7 +38,7 @@ def render_cornell_method():
             st.image("../pictures/cornell.png")
 
         with col3:
-            st.markdown("Side")
+            st.markdown("Keywords & Questions")
 
     with tab4:
         col1, col2, col3, col4 = st.columns((1, 3, 4, 1))
@@ -59,6 +59,6 @@ def render_cornell_method():
         cola, colb = st.columns((8, 1))
         with colb:
             # button to start the next quest
-            if st.button("Continue"):  # TODO
+            if st.button("Continue"):
                 st.session_state.place = "map_5"
                 st.rerun()

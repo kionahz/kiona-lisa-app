@@ -22,6 +22,7 @@ def render_cornell_method():
             st.image("../pictures/cornell.png")
 
         with col3:
+            st.title("Cornell Method")
             st.markdown("Cornell Method")
 
     with tab2:

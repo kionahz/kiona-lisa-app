@@ -1,6 +1,6 @@
 import streamlit as st
 
-# TODO copy all as is
+# TODO backpack 3 changes
 
 
 def render_backpack_empty():
@@ -104,9 +104,11 @@ def render_backpack_3():
         st.image("../pictures/backpack_items_3.png")
     with col2:
         st.markdown(
-            f""" <p style="line-height:130%; font-size: 1.5vw; color: white"><br><br><br>Amazing!<br><br>You 
+            f""" <p style="line-height:130%; font-size: 1.5vw; color: white">Amazing!<br><br>You 
             collected the third item in your backpack. What good are nails, without a hammer am I right?<br><br>Let's 
-            keep going to see what else you can get!</p>""",
+            keep going to see what else you can get!<br><br>Oh no wait I hear something. I think someone is approaching 
+            us. How weird I thought this island was completely deserted. Lets see who else is here. Maybe they can 
+            help you!</p>""",
             unsafe_allow_html=True
         )
         st.image("../pictures/shelly_without.png")
@@ -114,7 +116,7 @@ def render_backpack_3():
     cola, colb = st.columns((8, 1))
     with colb:
         if st.button("Continue"):
-            st.session_state.place = "cornell_method"
+            st.session_state.place = "pirate"
             st.rerun()
 
 

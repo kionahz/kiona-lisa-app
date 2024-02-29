@@ -18,7 +18,7 @@ from src.Pomodoro_q2 import render_pomodoro_q2
 from src.Sail_away import render_sail_away
 from src.Exit import render_exit
 
-# TODO: All done
+# TODO: Add pirate
 
 st.set_page_config(
     page_title="PIERATS - Productivity Island Expedition",
@@ -86,7 +86,7 @@ if start:
     welcome.empty()
 
     if st.session_state.place == "introduction":
-        render_pirate()
+        render_introduction()
 
     elif st.session_state.place == "map_1":
         render_map_1()
@@ -120,6 +120,9 @@ if start:
 
     elif st.session_state.place == "backpack_3":
         render_backpack_3()
+
+    if st.session_state.place == "pirate":
+        render_pirate()
 
     elif st.session_state.place == "cornell_method":
         render_cornell_method()

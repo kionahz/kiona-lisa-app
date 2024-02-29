@@ -17,7 +17,7 @@ def render_pirate():
             f""" <p style="line-height:130%; font-size: 1.5vw; color: white">Arr, gather 'round, ye lads! Sit tight 
             and listen close, for I've a tale to tell that'll curl yer toes and set the wind in yer sails. Once upon 
             a time, not so long ago, I sailed the vast and treacherous seas, seeking fortune and adventure at every 
-            turn. But alas, fate had other plans for this old sea dog. A fierce storm, the likes of which I'd never 
+            turn. But, fate had other plans for this old sea dog. A fierce storm, the likes of which I'd never 
             seen, swept me ship off course and dashed it upon the jagged rocks of this cursed isle. For years I've 
             been marooned here, a castaway left to fend for meself. But fear not, for I've learned a thing or two 
             about survival in these harsh and unforgiving lands. Ye see, survival ain't just about strength and 
@@ -28,14 +28,14 @@ def render_pirate():
             that comes yer way. And don´t forget ye also need food. The sea be teemin' with life, me hearties, 
             so cast yer lines and nets and reap the bounty that lies beneath the waves. And don't be afraid to forage 
             the land for fruits and berries, for nature provides for those who know where to look. But survival ain't 
-            just about sustenance; it's about stayin' sharp in both mind and body. Keep yer wits about ye at all 
+            just about yer daily bread; it's about stayin' sharp in both mind and body. Keep yer wits about ye at all 
             times, for danger lurks in every shadow. Train yer body to endure the rigors of this harsh land, 
             for only the strong survive in the end. And finally, me lads, never lose sight of yer true goal. Ye may 
             be stranded on this island for now, but never give up hope of escapin' its clutches and returnin' to the 
             open sea. Repair yer boat, gather yer supplies, and when the time is right, set sail for freedom once 
             more. So heed me words well, me hearties, and ye'll find that even in the darkest of times, 
             there be light to guide ye home. For as long as there be breath in yer lungs and fire in yer hearts, 
-            ye'll never be truly lost at sea.Now, enough of me ramblin's! Let's raise a toast to adventure, 
+            ye'll never be truly lost at sea. Now, enough of me ramblin's! Let's raise a toast to adventure, 
             to survival, and to the boundless spirit of the open sea! Yo ho ho!</p>""",
             unsafe_allow_html=True
         )

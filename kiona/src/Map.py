@@ -1,8 +1,6 @@
 import streamlit as st
 import time
 
-# TODO copy all as is
-
 
 def render_map_1():
     progress_10 = st.sidebar.progress(0)
@@ -14,7 +12,6 @@ def render_map_1():
             <p style="line-height: 100%; font-size: 1.1vw;">Introduction</p>
             <p style="padding-left: 30px; line-height:100%; font-size: 1.3vw;"><strong>Map</strong></p>
         """, unsafe_allow_html=True)
-
 
     col1, col2 = st.columns((5, 3), gap='large')
     with col1:
@@ -244,7 +241,7 @@ def render_map_8():
         st.markdown(f""" <p style="line-height:130%; font-size:2vw; color:white">Bravissimo!</p><p 
         style="line-height:150%; font-size: 1.5vw; color: white">When hearing all these italian foods I have to show 
         off some of my Italian.<br> Wow, have a look on the island! I think I can already see some light coming 
-        through the jungle. Don't stop now, you almost made it!</p>""",
+        through the jungle.<br><br>Don't stop now, you almost made it!</p>""",
                     unsafe_allow_html=True)
         st.image("../pictures/shelly_with_backpack.png", width=300)
 

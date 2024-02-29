@@ -1,6 +1,5 @@
 import streamlit as st
 
-# TODO copy all as is
 
 tasks = ["Search for a container (for food or water)", "Build a fire", "Build Shelter", "Collect Shells",
          "Collect Wood", "Watch the Sunset", "Search for drinking water", "Search for Food", "Build a Weapon",
@@ -37,10 +36,10 @@ def render_eisenhower_q2():
     col3, col4, col5 = st.columns((2, 3, 3))
     with col3:
         with st.expander(label="Here you can see your tasks again", expanded=True):
-            st.markdown(f""" 
-                    <p style="line-height:150%; font-size: 1.1vw; color: white">· Build a Fire<br>· Collect Shells<br>· Build a 
-                    shelter<br>· Search for Food<br>· Build a Weapon<br>· Collect Wood<br>· Watch the Sunset<br>· Search for 
-                    drinking water<br>· Explore the surroundings<br>· Search for a container (for food or water)</p>""",
+            st.markdown(f""" <p style="line-height:150%; font-size: 1.1vw; color: white">· Build a Fire<br>· Collect 
+            Shells<br>· Build a shelter<br>· Search for Food<br>· Build a Weapon<br>· Collect Wood<br>· Watch the 
+            Sunset<br>· Search for drinking water<br>· Explore the surroundings<br>· Search for a container (for food 
+            or water)</p>""",
                         unsafe_allow_html=True)
             st.info("Keep in mind to not select the same task more than once.\nContinue once you are "
                     "finished with the button on the bottom right.", icon="❕")

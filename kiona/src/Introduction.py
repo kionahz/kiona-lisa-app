@@ -1,8 +1,6 @@
 import streamlit as st
 import time
 
-# TODO copy all as is
-
 
 def render_introduction():
     progress_0 = st.sidebar.progress(0)

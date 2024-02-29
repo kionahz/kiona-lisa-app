@@ -1,7 +1,5 @@
 import streamlit as st
 
-# TODO backpack 3 changes
-
 
 def render_backpack_empty():
     st.sidebar.progress(10)
@@ -16,10 +14,10 @@ def render_backpack_empty():
         st.image("../pictures/backpack_items_empty.png")
     with col2:
         st.markdown(
-            f""" <p style="line-height:130%; font-size: 1.5vw; color: white"><br><br><br>This is your backpack. 
-            Unfortunately, it is still empty. Once you finish a quest, you will find your collected equipment here. 
-            Let´s see if you can gather enough equipment to repair your boat.<br><br>Let's get started and begin with 
-            the first quest!</p>""",
+            f""" <p style="line-height:130%; font-size: 2vw; color: white">This is your backpack.</p><p 
+            style="line-height:130%; font-size: 1.5vw; color: white"> Unfortunately, it is still empty. Once you 
+            finish a quest, you will find your collected equipment here. Let´s see if you can gather enough equipment 
+            to repair your boat.<br><br>Let's get started and begin with the first quest!</p>""",
             unsafe_allow_html=True
         )
         st.image("../pictures/shelly_without.png")
@@ -45,9 +43,9 @@ def render_backpack_1():
         st.image("../pictures/backpack_items_1.png")
     with col2:
         st.markdown(
-            f""" <p style="line-height:130%; font-size: 1.5vw; color: white"><br><br><br>Great!<br><br>You collected 
-            the first item in your backpack. You can use the wood later to patch up the holes in your boat.<br><br>Good 
-            job!</p>""",
+            f""" <p style="line-height:130%; font-size: 2vw; color: white">Great!</p><p style="line-height:130%; 
+            font-size: 1.5vw; color: white">You collected the first item in your backpack. You can use the wood later 
+            to patch up the holes in your boat.<br><br>Good job!</p>""",
             unsafe_allow_html=True
         )
         st.image("../pictures/shelly_without.png")
@@ -74,9 +72,9 @@ def render_backpack_2():
         st.image("../pictures/backpack_items_2.png")
     with col2:
         st.markdown(
-            f""" <p style="line-height:130%; font-size: 1.5vw; color: white"><br><br><br>Fantastic!<br><br>You 
-            collected the second item in your backpack. You can use the nails for the wood you received with your last 
-            quest.<br><br>Keep up the good work!</p>""",
+            f""" <p style="line-height:130%; font-size: 2vw; color: white">Fantastic!</p><p style="line-height:130%; 
+            font-size: 1.5vw; color: white">You collected the second item in your backpack. You can use the nails for 
+            the wood you received with your last quest.<br><br>Keep up the good work!</p>""",
             unsafe_allow_html=True
         )
         st.image("../pictures/shelly_without.png")
@@ -104,11 +102,10 @@ def render_backpack_3():
         st.image("../pictures/backpack_items_3.png")
     with col2:
         st.markdown(
-            f""" <p style="line-height:130%; font-size: 1.5vw; color: white">Amazing!<br><br>You 
-            collected the third item in your backpack. What good are nails, without a hammer am I right?<br><br>Let's 
-            keep going to see what else you can get!<br><br>Oh no wait I hear something. I think someone is approaching 
-            us. How weird I thought this island was completely deserted. Lets see who else is here. Maybe they can 
-            help you!</p>""",
+            f""" <p style="line-height:130%; font-size: 2vw; color: white">Amazing!</p><p style="line-height:130%; 
+            font-size: 1.5vw; color: white"You collected the third item in your backpack. What good are nails, 
+            without a hammer am I right?<br><br>Let's keep going to see what else you can get!<br><br>Oh no wait, can 
+            you hear that? I think someone is approaching you. Hopefully this person can help you!</p>""",
             unsafe_allow_html=True
         )
         st.image("../pictures/shelly_without.png")
@@ -137,9 +134,10 @@ def render_backpack_4():
         st.image("../pictures/backpack_items_4.png")
     with col2:
         st.markdown(
-            f""" <p style="line-height:130%; font-size: 1.5vw; color: white"><br><br><br>Awesome!<br><br>You 
-            collected the fourth item in your backpack. Its a saw that you can use to cut the wood to 
-            size. I guess you have everything to start with the woodwork?<br><br>Way to go!</p>""",
+            f""" <p style="line-height:130%; font-size: 2vw; color: white">Awesome!</p><p style="line-height:130%; 
+            font-size: 1.5vw; color: white">You collected the fourth item in your backpack. Its a saw that you can 
+            use to cut the wood to size. I guess you have everything to start with the woodwork?<br><br>Way to 
+            go!</p>""",
             unsafe_allow_html=True
         )
         st.image("../pictures/shelly_without.png")
@@ -169,9 +167,10 @@ def render_backpack_5():
         st.image("../pictures/backpack_items_5.png")
     with col2:
         st.markdown(
-            f""" <p style="line-height:130%; font-size: 1.5vw; color: white"><br><br><br>Extraordinary!<br><br>You 
-            collected the fifth item in your backpack. It's white, it's soft, it's... fabric! You can use it to fix 
-            your sails.<br><br>Wow! You are really becoming a pro.</p>""",
+            f""" <p style="line-height:130%; font-size: 2vw; color: white">Extraordinary!</p><p 
+            style="line-height:130%; font-size: 1.5vw; color: white">You collected the fifth item in your backpack. 
+            It's white, it's soft, it's... fabric! You can use it to fix your sails.<br><br>Wow! You are really 
+            becoming a pro.</p>""",
             unsafe_allow_html=True
         )
         st.image("../pictures/shelly_without.png")
@@ -202,9 +201,10 @@ def render_backpack_6():
         st.image("../pictures/backpack_items_6.png")
     with col2:
         st.markdown(
-            f""" <p style="line-height:130%; font-size: 1.5vw; color: white"><br><br><br>Excellent!<br><br>You 
-            collected the sixth item in your backpack. This needle and thread will be helpful to sew the fabric for 
-            your new sails. Just be careful to not prick your fingers! <br><br>You are nearly there!</p>""",
+            f""" <p style="line-height:130%; font-size: 2vw; color: white">Excellent!</p><p style="line-height:130%; 
+            font-size: 1.5vw; color: white">You collected the sixth item in your backpack. This needle and thread 
+            will be helpful to sew the fabric for your new sails. Just be careful to not prick your fingers! 
+            <br><br>You are nearly there!</p>""",
             unsafe_allow_html=True
         )
         st.image("../pictures/shelly_without.png")
@@ -236,9 +236,9 @@ def render_backpack_7():
         st.image("../pictures/backpack_items_7.png")
     with col2:
         st.markdown(
-            f""" <p style="line-height:130%; font-size: 1.5vw; color: white"><br><br><br>Wonderful!<br><br>You collected 
-                    the seventh item in your backpack. Its a rope that you can use to set and adjust the 
-                    sails. <br><br>Only one more quest to go. You can do it!</p>""",
+            f""" <p style="line-height:130%; font-size: 2vw; color: white">Wonderful!</p><p style="line-height:130%; 
+            font-size: 1.5vw; color: white">You collected the seventh item in your backpack. Its a rope that you can 
+            use to set and adjust the sails. <br><br>Only one more quest to go. You can do it!</p>""",
             unsafe_allow_html=True
         )
         st.image("../pictures/shelly_without.png")
@@ -271,10 +271,10 @@ def render_backpack_8():
         st.image("../pictures/backpack_items_8.png")
     with col2:
         st.markdown(
-            f""" <p style="line-height:130%; font-size: 1.5vw; color: white"><br><br><br>Terrific!<br><br>You got a 
-            bucket of paint. You can use it to put the finishing touches to your boat and make it look 
-            pretty.<br><br>You filled you backpack all the way.<br>Good work! Your boat is now finally completely 
-            repaired and you can sail away!</p>""",
+            f""" <p style="line-height:130%; font-size: 2vw; color: white">Terrific!</p><p style="line-height:130%; 
+            font-size: 1.5vw; color: white">You got a bucket of paint. You can use it to put the finishing touches to 
+            your boat and make it look pretty.<br><br>You filled you backpack all the way.<br>Good work! Your boat is 
+            now finally completely repaired and you can sail away!</p>""",
             unsafe_allow_html=True
         )
         st.image("../pictures/shelly_without.png")

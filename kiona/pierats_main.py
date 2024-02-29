@@ -18,7 +18,6 @@ from src.Pomodoro_q2 import render_pomodoro_q2
 from src.Sail_away import render_sail_away
 from src.Exit import render_exit
 
-# TODO: Add pirate
 
 st.set_page_config(
     page_title="PIERATS - Productivity Island Expedition",
@@ -47,7 +46,6 @@ if "place" not in st.session_state:
 col1, col2, col3 = st.columns((1, 4, 1))
 with col2:
     logo = st.image("../pictures/logo_banner.png")
-    # welcome = st.empty()
     welcome = st.markdown(f""" <p style="font-family: serif; font-size:3vw; color:white; 
     text-align:center;"><strong>Welcome to PIERATS<br>the Productivity Island Expedition!</strong></p>""",
                           unsafe_allow_html=True)
@@ -55,7 +53,7 @@ with col2:
     divider = st.divider()
 
     input_text = st.markdown(f"""<p style="line-height:160%; font-size: 1.5vw; color: white; text-align:center">Are 
-    you ready for your adventure?<br>Let me know your name and hit enter to start the game:</p>""",  # TODO ":" & line height 160%
+    you ready for your adventure?<br>Let me know your name and hit enter to start the game:</p>""",
                              unsafe_allow_html=True)
     player_name_container = st.empty()
 
@@ -78,7 +76,7 @@ if st.session_state.player_name != "":
 
     start = True
 
-# START THE GAME
+# start the game
 
 if start:
 

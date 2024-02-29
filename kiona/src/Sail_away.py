@@ -2,10 +2,7 @@ import streamlit as st
 import base64
 import time
 
-# TODO copy all as is
 
-# Code from https://discuss.streamlit.io/t/how-to-play-an-audio-file-automatically-generated-using-text-to-speech-in
-# -streamlit/33201/2
 def autoplay_audio(file_path: str):
     with open(file_path, "rb") as f:
         data = f.read()

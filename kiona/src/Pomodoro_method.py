@@ -1,6 +1,5 @@
 import streamlit as st
 
-# TODO copy all as is
 
 def render_pomodoro_method():
     st.sidebar.progress(70)
@@ -52,6 +51,6 @@ def render_pomodoro_method():
         cola, colb = st.columns((10, 1))
         with colb:
             # button to start the next quest
-            if st.button("Continue"):  # TODO
+            if st.button("Continue"):
                 st.session_state.place = "map_8"
                 st.rerun()

@@ -1,32 +1,48 @@
 import streamlit as st
 
+st.set_page_config(
+    page_title="PIERATS - Productivity Island Expedition",
+    page_icon="🐢",
+    layout="wide",
+    initial_sidebar_state="collapsed",
+    menu_items={
+        'About': "# Kiona and Lisa's Game!"
+    }
+)
 
+# Define the tasks
+tasks = [
+    "Search for a container e.g. for food or water",
+    "Build a fire",
+    "Build Shelter",
+    "Collect Shells",
+    "Collect Wood",
+    "Watch the Sunset",
+    "Search for drinking water",
+    "Search for Food",
+    "Build a Weapon",
+    "Explore the surroundings",
+]
 
-def homepage():
-    st.title("Homepage")
-    if st.sidebar.button("Play"):
-        st.session_state.sidebar_expanded = True
+# Initialize a dictionary to store tomato emojis for each task
+if 'tomatoes' not in st.session_state:
+    st.session_state.tomatoes = {task: [] for task in tasks}
 
-def quest_page(quest_number):
-    st.title(f"Quest {quest_number}")
-    if st.button("Continue"):
-        st.session_state.sidebar_expanded = True
+col3, col4, col5, col6 = st.columns((2, 1,1, 3))
+with col4:
+    # Add buttons to add tomatoes for each task
+    for task in tasks:
+        if st.button(f"{task} + "):
+            st.session_state.tomatoes[task].append("🍅")
 
-def main():
-    st.session_state.sidebar_expanded = False
+with col5:
+    # Add buttons to remove tomatoes for each task
+    for task in tasks:
+        if st.button(f"{task} - "):
+            if st.session_state.tomatoes[task]:
+                st.session_state.tomatoes[task].pop()
 
-    if not st.session_state.sidebar_expanded:
-        homepage()
-    else:
-        with st.sidebar:
-            st.title("Navigation")
-            page = st.radio("Go to", ["Home", "Quest 1", "Quest 2", "Quest 3", "Quest 4", "Quest 5", "Quest 6"])
-
-        if page == "Home":
-            st.session_state.sidebar_expanded = False
-        elif page.startswith("Quest"):
-            quest_number = int(page.split()[-1])
-            quest_page(quest_number)
-
-if __name__ == "__main__":
-    main()
+with col6:
+    # Display the tomato emojis for each task
+    for task in tasks:
+        st.text(f"{task}: {' '.join(st.session_state.tomatoes[task])}")

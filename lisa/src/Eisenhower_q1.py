@@ -1,6 +1,6 @@
 import streamlit as st
 import time
-# TODO copy all as is
+
 
 
 def render_eisenhower_q1():

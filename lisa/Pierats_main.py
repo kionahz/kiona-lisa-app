@@ -17,7 +17,6 @@ from src.Pomodoro_q2 import render_pomodoro_q2
 from src.Sail_away import render_sail_away
 from src.Exit import render_exit
 
-# TODO: All done
 
 st.set_page_config(
     page_title="PIERATS - Productivity Island Expedition",

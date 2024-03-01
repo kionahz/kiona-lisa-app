@@ -1,9 +1,12 @@
 import streamlit as st
 
 
+# function to render the empty backpack
 def render_backpack_empty():
+    # set progress to 10%
     st.sidebar.progress(10)
 
+    # display the current progress
     st.sidebar.markdown(f"""
         <p style="line-height: 100%; font-size: 1.1vw;">Introduction</p>
         <p style="padding-left: 30px; line-height:100%; font-size: 1.2vw;"><strong>Backpack</strong></p>

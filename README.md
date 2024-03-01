@@ -1,4 +1,4 @@
-# App Development Exam Project
+# App Development Exam Project - PIERATS
 This repository contains the code for the App Development Exam for the winter term 23/24 from Lisa Schmidt and Kiona Hitz.
 
 ## Description

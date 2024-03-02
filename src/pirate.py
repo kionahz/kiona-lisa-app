@@ -64,8 +64,11 @@ def render_pirate():
             unsafe_allow_html=True
         )
 
-    cola, colb = st.columns((8, 1))
-    with colb:
+    # Layout with two columns (same used on other pages) to guarantee consistency in the design of the pages
+    col_a, col_b = st.columns((8, 1))
+    with col_b:
+        # https://docs.streamlit.io/library/api-reference/control-flow/st.rerun
+        # Rerunning the app when the button is clicked to continues the game
         if st.button("Continue"):
             st.session_state.place = "cornell_method"
             st.rerun()

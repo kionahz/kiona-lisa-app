@@ -1,19 +1,42 @@
 import streamlit as st
-import time
+# TODO: Formatting done -> Comments
+
+line_height_sidebar = "100%"
+font_size_sidebar = "1.1vw"
+font_size_sidebar_current = "1.3vw"
+line_height_pomodoro_main = "194%"
+font_size_pomodoro = "1.7vw"
+text_align_pomodoro = "right"
+line_height_pomodoro = "150%"
+x = 2
+y = 3
+
+# Define the list of strings
+sections = [
+    "Introduction",
+    "Eisenhower First Try",
+    "Eisenhower Method",
+    "Eisenhower Applied",
+    "Pirate Encounter",
+    "Cornell Method",
+    "Blurting Method",
+    "<strong>Quest First Try</strong>"
+]
 
 
 def render_pomodoro_q1():
     st.sidebar.progress(60)
 
-    st.sidebar.markdown(f"""
-    <p style="line-height: 100%; font-size: 1.1vw;">Introduction</p>
-    <p style="line-height: 100%; font-size: 1.1vw;">Eisenhower First Try</p>
-    <p style="line-height: 100%; font-size: 1.1vw;">Eisenhower Method</p>
-    <p style="line-height: 100%; font-size: 1.1vw;">Eisenhower Applied</p>
-    <p style="line-height: 100%; font-size: 1.1vw;">Cornell Method</p>
-    <p style="line-height: 100%; font-size: 1.1vw;">Blurting Method</p>
-        <p style="line-height: 100%; font-size: 1.3vw;"><strong>Quest First Try</strong></p>
-    """, unsafe_allow_html=True)
+    # Use a loop to format and display the strings
+    for section in sections:
+        if "<strong>" in section:
+            st.sidebar.markdown(f"""
+                <p style="line-height: {line_height_sidebar}; font-size: {font_size_sidebar_current};">{section}</p>
+                """, unsafe_allow_html=True)
+        else:
+            st.sidebar.markdown(f"""
+                <p style="line-height: {line_height_sidebar}; font-size: {font_size_sidebar};">{section}</p>
+                """, unsafe_allow_html=True)
 
     col_1, col_2 = st.columns((1, 4))
     with col_1:
@@ -21,66 +44,81 @@ def render_pomodoro_q1():
     with col_2:
         st.title("Hurry up!")
         st.markdown(
-            f""" <p style="line-height:130%; font-size: 1.5vw; color: white">As you just heard from the pirate: time 
-            management is a crucial part of surviving this island. So let's have a look at your tasks again. Looks 
-            like the pirate has already sorted them for you in the order that he would recommend. The only thing left 
-            for you to do is to think about how much time you need for the individual tasks. Fill out the time slots 
-            in hours and minutes by either selecting one of the suggested times or by writing them down in the slots. 
-            <br>For example it takes me about 23 minutes to clean my shell. So I would put in 00:23 for this 
-            task.</p>""",
-            unsafe_allow_html=True
+            f""" 
+            <p style="line-height:130%; font-size: 1.5vw;">
+                As you just heard from the pirate: time management is a crucial part of surviving this island. So let's 
+                have a look at your tasks again. Looks like the pirate has already sorted them for you in the order that 
+                he would recommend. The only thing left for you to do is to think about how much time you need for the 
+                individual tasks. Fill out the time slots in hours and minutes by either selecting one of the suggested 
+                times or by writing them down in the slots. <br>For example it takes me about 23 minutes to clean my 
+                shell. So I would put in 00:23 for this task.
+            </p>
+            """, unsafe_allow_html=True
         )
         st.info("Continue once you are finished with the button on the bottom right.", icon="❕")
 
     st.divider()
 
-    col3, col4 = st.columns((2, 3))
+    col3, col4 = st.columns((x, y))
 
     with col3:
         st.markdown(
-            f""" <p style="text-align:right; font-size:1.7vw; line-height: 194%;">Search for drinking water<br>Build 
-            a Shelter<br>Serach for food</p> """,
-            unsafe_allow_html=True)
+            f""" 
+            <p style="text-align:right; font-size:{font_size_pomodoro}; line-height: {line_height_pomodoro_main};">
+                Search for drinking water<br>Build a Shelter<br>Search for food
+            </p> 
+            """, unsafe_allow_html=True)
 
     with col4:
         st.time_input('Label1', value=None, label_visibility="collapsed")
         st.time_input('Label2', value=None, label_visibility="collapsed")
         st.time_input('Label3', value=None, label_visibility="collapsed")
 
-    col5, col6 = st.columns((2, 3))
+    col5, col6 = st.columns((x, y))
     with col5:
         st.markdown(
-            f""" <p style="text-align:right; font-size:1.7vw; line-height: 194%;">Collect Wood<br>Build a 
-            fire<br>Search for a container (for water or food)</p> """,
-            unsafe_allow_html=True)
+            f""" 
+            <p style="text-align:right; font-size:{font_size_pomodoro}; line-height: {line_height_pomodoro_main};">
+                Collect Wood<br>Build a fire<br>Search for a container (for water or food)
+            </p> 
+            """, unsafe_allow_html=True)
 
     with col6:
         st.time_input('Label4', value=None, label_visibility="collapsed")
         st.time_input('Label5', value=None, label_visibility="collapsed")
         st.time_input('Label6', value=None, label_visibility="collapsed")
 
-    col7, col8 = st.columns((2, 3))
+    col7, col8 = st.columns((x, y))
     with col7:
         st.markdown(
-            f""" <p style="text-align:right; font-size:1.7vw; line-height: 194%;">Build a weapon<br>Explore the 
-            surroundings<br>Collect Shells</p> """,
-            unsafe_allow_html=True)
+            f""" 
+            <p style="text-align:right; font-size:{font_size_pomodoro}; line-height: {line_height_pomodoro_main};">
+                Build a weapon<br>Explore the surroundings<br>Collect Shells
+            </p> 
+            """, unsafe_allow_html=True)
 
     with col8:
         st.time_input('Label7', value=None, label_visibility="collapsed")
         st.time_input('Label8', value=None, label_visibility="collapsed")
         st.time_input('Label9', value=None, label_visibility="collapsed")
 
-    col9, col10 = st.columns((2, 3))
+    col9, col10 = st.columns((x, y))
     with col9:
-        st.markdown(f""" <p style="text-align:right; font-size:1.7vw; line-height: 194%;">Watch the Sunset</p> """,
-                    unsafe_allow_html=True)
+        st.markdown(
+            f""" 
+            <p style="text-align:right; font-size:{font_size_pomodoro}; line-height: {line_height_pomodoro_main};">
+                Watch the Sunset
+            </p> 
+            """, unsafe_allow_html=True)
 
     with col10:
         st.time_input('Label10', value=None, label_visibility="collapsed")
 
-    cola, colb = st.columns((8, 1))
-    with colb:
+    # Layout with two columns (same used on other pages) to guarantee consistency in the design of the pages
+    col_a, col_b = st.columns((8, 1))
+    with col_b:
+        # https://docs.streamlit.io/library/api-reference/control-flow/st.rerun
+        # Rerunning the app when the button is clicked to continues the game
         if st.button("Continue"):
             st.session_state.place = "map_7"
             st.rerun()

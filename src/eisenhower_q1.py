@@ -1,12 +1,15 @@
 import streamlit as st
-# TODO: Formatting done -> Comments
 
+# TODO: Formatting & Comments
+
+# Setting up some constants for styling
 line_height_sidebar = "100%"
 font_size_sidebar = "1.1vw"
 font_size_sidebar_current = "1.3vw"
 line_height = "130%"
 font_size_text = "1.5vw"
 
+# List of tasks for the first quest
 tasks = ["Search for a container (for food or water)",
          "Build a fire",
          "Build Shelter",
@@ -20,9 +23,12 @@ tasks = ["Search for a container (for food or water)",
          ]
 
 
+# Function to render the first quest of the Eisenhower Method
 def render_eisenhower_q1():
+    # Creating a progress bar in the sidebar
     st.sidebar.progress(10)
 
+    # Displaying sections in the sidebar
     st.sidebar.markdown(
         f"""
         <p style="line-height: {line_height_sidebar}; font-size: {font_size_sidebar};">
@@ -34,6 +40,7 @@ def render_eisenhower_q1():
         """, unsafe_allow_html=True
     )
 
+    # Layout with two columns for image of shelly and a description of the quest
     col_1, col_2 = st.columns((1, 4))
     with col_1:
         st.image("pictures/shelly.png")
@@ -47,13 +54,14 @@ def render_eisenhower_q1():
                the left by choosing one of the boxes and selecting the task you would like to place there. You can 
                rearrange your tasks indefinitely until you are happy with your order. 
             </p>
-            """, unsafe_allow_html=True
-                    )
+            """, unsafe_allow_html=True)
 
     st.divider()
 
-    col3, colspace, colnumb, col4 = st.columns((2, 0.1, 0.18, 3))
+    # layout with 4 columns; col_space just for layout reasons
+    col3, col_space, col_numb, col4 = st.columns((2, 0.1, 0.18, 3))
     with col3:
+        # Expander displays the tasks and info box
         with st.expander(label="Here you can see all your tasks", expanded=True):
             st.markdown(
                 f""" 
@@ -66,7 +74,8 @@ def render_eisenhower_q1():
 
             st.info("Keep in mind to not select the same task more than once.\nContinue once you are finished with "
                     "the button on the bottom right.", icon="❕")
-    with colnumb:
+    with col_numb:
+        # Markdown for numbering the order
         st.markdown(
             f""" 
             <p style="text-align:right; font-size:1.7vw; line-height: 194%;">  
@@ -76,6 +85,7 @@ def render_eisenhower_q1():
         )
 
     with col4:
+        # Creating 10 select boxes for the tasks
         st.selectbox("1", tasks, index=None,
                      placeholder="Select what you would do first...", label_visibility="collapsed")
         st.selectbox("2", tasks, index=None,
@@ -97,8 +107,11 @@ def render_eisenhower_q1():
         st.selectbox("10", tasks, index=None,
                      placeholder="Select what you would do last...", label_visibility="collapsed")
 
+    # Layout with two columns (same used on other pages) to guarantee consistency in the design of the pages
     col_a, col_b = st.columns((8, 1))
     with col_b:
+        # https://docs.streamlit.io/library/api-reference/control-flow/st.rerun
+        # Rerunning the app when the button is clicked to continues the game
         if st.button("Continue"):
             st.session_state.place = "map_2"
             st.rerun()

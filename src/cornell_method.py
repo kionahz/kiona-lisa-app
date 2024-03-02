@@ -1,16 +1,20 @@
 import streamlit as st
-# TODO: Formatting done -> Comments
+# TODO: Formatting & Comments
 
+# Setting up some constants for styling
 line_height_sidebar = "100%"
 line_height_cornell = "130%"
 font_size_sidebar = "1.1vw"
 font_size_sidebar_current = "1.3vw"
 font_size_cornell = "1.5vw"
 font_size_cornell_title = "2vw"
+
+# Variables for column sizing
 x = 1
 y = 3
 z = 4
 
+# List of sections until current page
 sections = ["Introduction",
             "Eisenhower First Try",
             "Eisenhower Method",
@@ -26,10 +30,12 @@ tab_titles = ["Strange Encounter",
               "Did you know?"]
 
 
+# Function to render the Cornell Method page
 def render_cornell_method():
+    # Creating a progress bar in the sidebar
     st.sidebar.progress(40)
 
-    # Use a loop to format and display the strings
+    # Displaying sections in the sidebar using a loop
     for section in sections:
         if "<strong>" in section:
             st.sidebar.markdown(f"""
@@ -40,11 +46,17 @@ def render_cornell_method():
                         <p style="line-height: {line_height_sidebar}; font-size: {font_size_sidebar};">{section}</p>
                         """, unsafe_allow_html=True)
 
+    # Page Title
+    st.title("Cornell Method")
+
+    # Creating tabs for the different sections
     tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs(tab_titles)
 
+    # Tab 1: Shelly's transition to Cornell Method
     with tab1:
         col1, col2 = st.columns((3, 5), gap='large')
         with col1:
+            # Adding some space
             st.markdown(
                 f""" 
                 <p style="line-height:130%; font-size: 1.3vw; ">
@@ -54,6 +66,7 @@ def render_cornell_method():
             st.image("pictures/shelly_without.png")
 
         with col2:
+            # Markdown with transition to Method
             st.markdown(
                 f""" 
                 <p style="line-height:{line_height_cornell}; font-size: {font_size_cornell_title};">
@@ -69,6 +82,7 @@ def render_cornell_method():
                 """, unsafe_allow_html=True
             )
 
+    # Tab 2: Introduces Cornell Method with image and markdown
     with tab2:
         col1, col2, col3, col4 = st.columns((x, y, z, x))
         with col2:
@@ -89,6 +103,7 @@ def render_cornell_method():
                 """, unsafe_allow_html=True
             )
 
+    # Explaining Main & keynotes of Method with image and markdown
     with tab3:
         col1, col2, col3, col4 = st.columns((x, y, z, x))
         with col2:
@@ -98,7 +113,7 @@ def render_cornell_method():
             st.markdown(
                 f""" 
                 <p style="line-height:{line_height_cornell}; font-size:{font_size_cornell_title};">
-                    Key Notes
+                    Main Notes & Key Notes
                 </p> 
                 <p style="line-height:{line_height_cornell}; font-size: {font_size_cornell}; ">
                 As you are reading or listening to new information, write down the key points, details and explanations 
@@ -108,6 +123,7 @@ def render_cornell_method():
                 """, unsafe_allow_html=True
             )
 
+    # Tab 4: Explaining left side Keywords and Questions of Method with image and markdown
     with tab4:
         col1, col2, col3, col4 = st.columns((x, y, z, x))
         with col2:
@@ -117,7 +133,7 @@ def render_cornell_method():
             st.markdown(
                 f""" 
                 <p style="line-height:{line_height_cornell}; font-size:{font_size_cornell_title};">
-                    Side
+                    Keywords & Questions
                 </p> 
                 <p style="line-height:{line_height_cornell}; font-size: {font_size_cornell};">
                     On the left side you can focus on writing down the most important key points that summarize your key 
@@ -127,6 +143,7 @@ def render_cornell_method():
                 """, unsafe_allow_html=True
             )
 
+    # Tab 5: Explaining bottom summary of method with image and markdown
     with tab5:
         col1, col2, col3, col4 = st.columns((x, y, z, x))
         with col2:
@@ -149,10 +166,12 @@ def render_cornell_method():
                 """, unsafe_allow_html=True
             )
 
+    # Tab 6: Did you know with image and markdown about Cornell University
     with tab6:
-        col1, col2, col3, col4 = st.columns((x, y, z, x))
+        col1, col2, col3, col4 = st.columns((x, z, z, x))
         with col2:
-            st.image("pictures/cornell.png")
+            # https://news.cornell.edu/stories/2023/10/cornell-awarded-excellence-diversity-and-inclusion
+            st.image("pictures/cornell_uni.png")
 
         with col3:
             st.markdown(
@@ -163,7 +182,7 @@ def render_cornell_method():
                 <p style="line-height:{line_height_cornell}; font-size: {font_size_cornell};">
                     This method was developed at the Cornell University by a professor for their students, so they could 
                     take better notes and encourage active studying.<br><br>So, if you are already learning this method 
-                    right now, it will be super easy for you at university. Very impressive!
+                    right now, it will be super easy for you at university. Or maybe already at school? Very impressive!
                 </p>
                 """, unsafe_allow_html=True
             )

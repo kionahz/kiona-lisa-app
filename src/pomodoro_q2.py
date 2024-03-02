@@ -1,6 +1,7 @@
 import streamlit as st
 # TODO: Formatting done -> Comments
 
+# Setting up some constants for styling
 line_height_sidebar = "100%"
 line_height_pomodoro_main = "130%"
 font_size_sidebar = "1.1vw"
@@ -8,11 +9,13 @@ font_size_sidebar_current = "1.3vw"
 font_size_pomodoro = "1.5vw"
 text_align_pomodoro = "right"
 line_height_pomodoro = "150%"
+
+# Variables for column sizing
 x = 3
 y = 0.5
 z = 0.6
 
-# Define the list of strings
+#  List of sections until current page
 sections = [
     "Introduction",
     "Eisenhower First Try",
@@ -49,7 +52,9 @@ button9_rem_key = "button9_rem"
 button10_rem_key = "button10_rem"
 
 
+# Function to render the second Pomodoro Quest
 def render_pomodoro_q2():
+    # Displaying sections in the sidebar using a loop
     st.sidebar.progress(80)
 
     # Use a loop to format and display the strings

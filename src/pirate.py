@@ -3,6 +3,21 @@ import base64
 
 # TODO: In Line 35 put the audio of the text!!!
 
+# Setting up some constants for styling
+line_height_sidebar = "100%"
+font_size_sidebar = "1.1vw"
+font_size_sidebar_current = "1.3vw"
+line_height = "130%"
+font_size_text = "1.5vw"
+font_size_title = "2vw"
+
+# List of sections until current page
+sections = ["Introduction",
+            "Eisenhower First Try",
+            "Eisenhower Method",
+            "Eisenhower Applied",
+            "<strong>Pirate Encounter</strong>"]
+
 
 # Code from https://discuss.streamlit.io/t/how-to-play-an-audio-file-automatically-generated-using-text-to-speech-in
 # -streamlit/33201/2
@@ -22,12 +37,20 @@ def autoplay_audio(file_path: str):
 
 
 def render_pirate():
+    # Creating a progress bar in the sidebar
     st.sidebar.progress(45)
 
-    st.sidebar.markdown(f""" <p style="line-height: 100%; font-size: 1.1vw;">Introduction</p> <p style="line-height: 
-    100%; font-size: 1.1vw;">Eisenhower First Try</p> <p style="line-height: 100%; font-size: 1.1vw;">Eisenhower 
-    Method</p> <p style="line-height: 100%; font-size: 1.1vw;">Eisenhower Applied</p> <p style="padding-left: 30px; 
-    line-height:100%; font-size: 1.3vw;"><strong>Pirate Encounter</strong></p> """, unsafe_allow_html=True)
+    # Displaying sections in the sidebar using a loop
+    for section in sections:
+        if "<strong>" in section:
+            st.sidebar.markdown(f"""
+                        <p style="line-height: {line_height_sidebar}; font-size: {font_size_sidebar_current};">{section}</p>
+                        """, unsafe_allow_html=True)
+        else:
+            st.sidebar.markdown(f"""
+                        <p style="line-height: {line_height_sidebar}; font-size: {font_size_sidebar};">{section}</p>
+                        """, unsafe_allow_html=True)
+
 
     col1, col2 = st.columns((1, 3), gap='large')
     with col1:

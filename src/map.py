@@ -1,7 +1,8 @@
 import streamlit as st
 import time
-# TODO: Formatting done -> Comments
+# TODO: Formatting & Comments
 
+# Setting up some constants for styling
 line_height_sidebar = "100%"
 line_height_map = "140%"
 font_size_sidebar = "1.1vw"
@@ -10,6 +11,11 @@ font_size_map = "1.5vw"
 font_size_map_title = "2vw"
 padding_left = "30px"
 
+# Variables for column sizing
+x = 5
+y = 3
+
+# Lists of sections for different map pages
 sections_1 = ["Introduction",
               "<strong>Map</strong>"]
 
@@ -78,14 +84,16 @@ sections_9 = ["Introduction",
               "Pomodoro Applied",
               "<strong>Map</strong>"]
 
+
 # Functions to render the map pages
 def render_map_1():
-    # Creating a progress bar in the sidebar
+    # Creating a progress bar in the sidebar using time to let the bar grow slowly
     progress_10 = st.sidebar.progress(0)
     for percent_complete_10 in range(1, 10):
         time.sleep(0.01)
         progress_10.progress(percent_complete_10)
 
+    # Displaying sections in the sidebar using a loop
     for section in sections_1:
         if "<strong>" in section:
             st.sidebar.markdown(f"""
@@ -101,7 +109,8 @@ def render_map_1():
                         </p>
                         """, unsafe_allow_html=True)
 
-    col1, col2 = st.columns((5, 3), gap='large')
+    # Creating a layout with two columns for image of the map and description of the situation
+    col1, col2 = st.columns((x, y), gap='large')
     with col1:
         st.image("pictures/island_01.png")
     with col2:
@@ -132,11 +141,13 @@ def render_map_1():
 
 
 def render_map_2():
+    # Creating a progress bar in the sidebar
     progress_20 = st.sidebar.progress(0)
     for percent_complete_20 in range(1, 20):
         time.sleep(0.01)
         progress_20.progress(percent_complete_20)
 
+    # Displaying sections in the sidebar using a loop
     for section in sections_2:
         if "<strong>" in section:
             st.sidebar.markdown(f"""
@@ -152,7 +163,8 @@ def render_map_2():
                         </p>
                         """, unsafe_allow_html=True)
 
-    col1, col2 = st.columns((5, 3), gap='large')
+    # Creating a layout with two columns for image of the map and description of the situation
+    col1, col2 = st.columns((x, y), gap='large')
     with col1:
         st.image("pictures/island_02.png")
     with col2:
@@ -179,11 +191,13 @@ def render_map_2():
 
 
 def render_map_3():
+    # Creating a progress bar in the sidebar
     progress_30 = st.sidebar.progress(0)
     for percent_complete_30 in range(1, 30):
         time.sleep(0.01)
         progress_30.progress(percent_complete_30)
 
+    # Displaying sections in the sidebar using a loop
     for section in sections_3:
         if "<strong>" in section:
             st.sidebar.markdown(f"""
@@ -199,7 +213,8 @@ def render_map_3():
                         </p>
                         """, unsafe_allow_html=True)
 
-    col1, col2 = st.columns((5, 3), gap='large')
+    # Creating a layout with two columns for image of the map and description of the situation
+    col1, col2 = st.columns((x, y), gap='large')
     with col1:
         st.image("pictures/island_03.png")
     with col2:
@@ -224,11 +239,13 @@ def render_map_3():
 
 
 def render_map_4():
+    # Creating a progress bar in the sidebar
     progress_40 = st.sidebar.progress(0)
     for percent_complete_40 in range(1, 40):
         time.sleep(0.01)
         progress_40.progress(percent_complete_40)
 
+    # Displaying sections in the sidebar using a loop
     for section in sections_4:
         if "<strong>" in section:
             st.sidebar.markdown(f"""
@@ -244,7 +261,8 @@ def render_map_4():
                         </p>
                         """, unsafe_allow_html=True)
 
-    col1, col2 = st.columns((5, 3), gap='large')
+    # Creating a layout with two columns for image of the map and description of the situation
+    col1, col2 = st.columns((x, y), gap='large')
     with col1:
         st.image("pictures/island_04.png")
     with col2:
@@ -269,11 +287,13 @@ def render_map_4():
 
 
 def render_map_5():
+    # Creating a progress bar in the sidebar
     progress_50 = st.sidebar.progress(0)
     for percent_complete_50 in range(1, 50):
         time.sleep(0.01)
         progress_50.progress(percent_complete_50)
 
+    # Displaying sections in the sidebar using a loop
     for section in sections_5:
         if "<strong>" in section:
             st.sidebar.markdown(f"""
@@ -289,7 +309,8 @@ def render_map_5():
                         </p>
                         """, unsafe_allow_html=True)
 
-    col1, col2 = st.columns((5, 3), gap='large')
+    # Creating a layout with two columns for image of the map and description of the situation
+    col1, col2 = st.columns((x, y), gap='large')
     with col1:
         st.image("pictures/island_05.png")
     with col2:
@@ -315,11 +336,13 @@ def render_map_5():
 
 
 def render_map_6():
+    # Creating a progress bar in the sidebar
     progress_60 = st.sidebar.progress(0)
     for percent_complete_60 in range(1, 60):
         time.sleep(0.01)
         progress_60.progress(percent_complete_60)
 
+    # Displaying sections in the sidebar using a loop
     for section in sections_6:
         if "<strong>" in section:
             st.sidebar.markdown(f"""
@@ -335,7 +358,8 @@ def render_map_6():
                         </p>
                         """, unsafe_allow_html=True)
 
-    col1, col2 = st.columns((5, 3), gap='large')
+    # Creating a layout with two columns for image of the map and description of the situation
+    col1, col2 = st.columns((x, y), gap='large')
     with col1:
         st.image("pictures/island_06.png")
     with col2:
@@ -362,11 +386,13 @@ def render_map_6():
 
 
 def render_map_7():
+    # Creating a progress bar in the sidebar
     progress_70 = st.sidebar.progress(0)
     for percent_complete_70 in range(1, 70):
         time.sleep(0.01)
         progress_70.progress(percent_complete_70)
 
+    # Displaying sections in the sidebar using a loop
     for section in sections_7:
         if "<strong>" in section:
             st.sidebar.markdown(f"""
@@ -382,7 +408,8 @@ def render_map_7():
                         </p>
                         """, unsafe_allow_html=True)
 
-    col1, col2 = st.columns((5, 3), gap='large')
+    # Creating a layout with two columns for image of the map and description of the situation
+    col1, col2 = st.columns((x, y), gap='large')
     with col1:
         st.image("pictures/island_07.png")
     with col2:
@@ -409,11 +436,13 @@ def render_map_7():
 
 
 def render_map_8():
+    # Creating a progress bar in the sidebar
     progress_80 = st.sidebar.progress(0)
     for percent_complete_80 in range(1, 80):
         time.sleep(0.01)
         progress_80.progress(percent_complete_80)
 
+    # Displaying sections in the sidebar using a loop
     for section in sections_8:
         if "<strong>" in section:
             st.sidebar.markdown(f"""
@@ -429,7 +458,8 @@ def render_map_8():
                         </p>
                         """, unsafe_allow_html=True)
 
-    col1, col2 = st.columns((5, 3), gap='large')
+    # Creating a layout with two columns for image of the map and description of the situation
+    col1, col2 = st.columns((x, y), gap='large')
     with col1:
         st.image("pictures/island_08.png")
     with col2:
@@ -457,11 +487,13 @@ def render_map_8():
 
 
 def render_map_9():
+    # Creating a progress bar in the sidebar
     progress_90 = st.sidebar.progress(0)
     for percent_complete_90 in range(1, 90):
         time.sleep(0.01)
         progress_90.progress(percent_complete_90)
 
+    # Displaying sections in the sidebar using a loop using a loop
     for section in sections_9:
         if "<strong>" in section:
             st.sidebar.markdown(f"""
@@ -477,7 +509,8 @@ def render_map_9():
                         </p>
                         """, unsafe_allow_html=True)
 
-    col1, col2 = st.columns((5, 3), gap='large')
+    # Creating a layout with two columns for image of the map and description of the situation
+    col1, col2 = st.columns((x, y), gap='large')
     with col1:
         st.image("pictures/island_09.png")
     with col2:

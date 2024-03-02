@@ -1,20 +1,25 @@
 import streamlit as st
-# TODO: Formatting done -> Comments
+# TODO: Formatting & Comments
 
+# Setting up some constants for styling
 line_height_sidebar = "100%"
 font_size_sidebar = "1.1vw"
 font_size_sidebar_current = "1.3vw"
 line_height = "130%"
 font_size_text = "1.5vw"
 font_size_title = "2vw"
+
+# Variables for column sizing
 x = 2
 y = 1
 
+# List of sections until current page
 sections = ["Introduction",
             "Eisenhower First Try",
             "<strong>Eisenhower Method</strong>"
             ]
 
+# List of titles for the tabs
 tab_titles = ["Eisenhower Matrix",
               "(1) Do",
               "(2) Schedule",
@@ -23,10 +28,12 @@ tab_titles = ["Eisenhower Matrix",
               "Did you know?"]
 
 
+# Function to render the eisenhower method page
 def render_eisenhower_method():
+    # Creating a progress bar in the sidebar
     st.sidebar.progress(20)
 
-    # Use a loop to format and display the strings
+    # Displaying sections in the sidebar using a loop
     for section in sections:
         if "<strong>" in section:
             st.sidebar.markdown(f"""
@@ -39,10 +46,15 @@ def render_eisenhower_method():
                         </p>
                         """, unsafe_allow_html=True)
 
+    # Page Title
     st.title("Eisenhower Matrix")
+
+    # Creating tabs for the different sections
     tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs(tab_titles)
 
+    # Tab 1: Eisenhower Matrix introduction
     with tab1:
+        # Creating a layout with two columns for displaying a picture of the matrix and some explanation
         col1, col2 = st.columns((x, y))
         with col1:
             st.image("pictures/em_empty.png")
@@ -60,8 +72,10 @@ def render_eisenhower_method():
                 """, unsafe_allow_html=True
             )
 
+    # Tab 2: Field 1 - Do
     with tab2:
         col1, col2 = st.columns((x, y))
+        # Creating a layout with two columns for displaying a picture of the matrix and some explanation
         with col1:
             st.image("pictures/em_do.png")
         with col2:
@@ -77,8 +91,10 @@ def render_eisenhower_method():
                 """, unsafe_allow_html=True
             )
 
+    # Tab 3: Field 2 - Schedule
     with tab3:
         col1, col2 = st.columns((x, y))
+        # Creating a layout with two columns for displaying a picture of the matrix and some explanation
         with col1:
             st.image("pictures/em_schedule.png")
         with col2:
@@ -95,8 +111,10 @@ def render_eisenhower_method():
                 """, unsafe_allow_html=True
             )
 
+    # Tab 4: Field 3 - Delegate
     with tab4:
         col1, col2 = st.columns((x, y))
+        # Creating a layout with two columns for displaying a picture of the matrix and some explanation
         with col1:
             st.image("pictures/em_delegate.png")
         with col2:
@@ -114,8 +132,10 @@ def render_eisenhower_method():
                 """, unsafe_allow_html=True
             )
 
+    # Tab 5: Field 4 - Delete
     with tab5:
         col1, col2 = st.columns((x, y))
+        # Creating a layout with two columns for displaying a picture of the matrix and some explanation
         with col1:
             st.image("pictures/em_delete.png")
         with col2:
@@ -132,9 +152,12 @@ def render_eisenhower_method():
                 """, unsafe_allow_html=True
             )
 
+    # Tab 6: Did you know
     with tab6:
         col1, col2 = st.columns((y, x), gap="large")
+        # Creating a layout with two columns for displaying a picture of the matrix and some explanation
         with col1:
+            # https://upload.wikimedia.org/wikipedia/commons/6/63/Dwight_D._Eisenhower%2C_official_photo_portrait%2C_May_29%2C_1959.jpg
             st.image("pictures/dwight_eisenhower.png")
         with col2:
             st.markdown(
@@ -154,8 +177,11 @@ def render_eisenhower_method():
                 """, unsafe_allow_html=True
             )
 
+        # Layout with two columns (same used on other pages) to guarantee consistency in the design of the pages
         col_a, col_b = st.columns((8, 1))
         with col_b:
+            # https://docs.streamlit.io/library/api-reference/control-flow/st.rerun
+            # Rerunning the app when the button is clicked to continues the game
             if st.button("Continue"):
                 st.session_state.place = "map_3"
                 st.rerun()

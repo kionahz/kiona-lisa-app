@@ -1,7 +1,7 @@
 import streamlit as st
+# TODO: Formatting & Comments
 
-# TODO: Formatting done -> Comments
-
+# Setting up some constants for styling
 line_height_sidebar = "100%"
 line_height_backpack = "130%"
 font_size_sidebar = "1.1vw"
@@ -10,6 +10,11 @@ font_size_backpack = "1.5vw"
 font_size_backpack_title = "2vw"
 padding_left_backpack = "30px"
 
+# Variables for column sizing
+x = 5
+y = 3
+
+# Lists of sections for different backpack pages
 sections_e = ["Introduction",
               "<strong>Backpack</strong>"]
 
@@ -81,11 +86,12 @@ sections8 = ["Introduction",
              ]
 
 
-# function to render the empty backpack
+# Function to render the empty backpack
 def render_backpack_empty():
-    # set progress to 10%
+    # Creating a progress bar in the sidebar
     st.sidebar.progress(10)
 
+    # Displaying sections in the sidebar using a loop
     for section in sections_e:
         if "<strong>" in section:
             st.sidebar.markdown(f"""
@@ -101,7 +107,8 @@ def render_backpack_empty():
                         </p>
                         """, unsafe_allow_html=True)
 
-    col1, col2 = st.columns((5, 3), gap='large')
+    # Creating a layout with two columns for image of the backpack and description of the situation
+    col1, col2 = st.columns((x, y), gap='large')
     with col1:
         st.image("pictures/backpack_items_empty.png")
     with col2:
@@ -128,8 +135,10 @@ def render_backpack_empty():
 
 
 def render_backpack_1():
+    # Creating a progress bar in the sidebar
     st.sidebar.progress(20)
 
+    # Displaying sections in the sidebar using a loop
     for section in sections1:
         if "<strong>" in section:
             st.sidebar.markdown(f"""
@@ -145,7 +154,8 @@ def render_backpack_1():
                         </p>
                         """, unsafe_allow_html=True)
 
-    col1, col2 = st.columns((5, 3), gap='large')
+    # Creating a layout with two columns for image of the backpack and description of the situation
+    col1, col2 = st.columns((x, y), gap='large')
     with col1:
         st.image("pictures/backpack_items_1.png")
     with col2:
@@ -173,8 +183,10 @@ def render_backpack_1():
 
 
 def render_backpack_2():
+    # Creating a progress bar in the sidebar
     st.sidebar.progress(30)
 
+    # Displaying sections in the sidebar using a loop
     for section in sections2:
         if "<strong>" in section:
             st.sidebar.markdown(f"""
@@ -190,7 +202,8 @@ def render_backpack_2():
                         </p>
                         """, unsafe_allow_html=True)
 
-    col1, col2 = st.columns((5, 3), gap='large')
+    # Creating a layout with two columns for image of the backpack and description of the situation
+    col1, col2 = st.columns((x, y), gap='large')
     with col1:
         st.image("pictures/backpack_items_2.png")
     with col2:
@@ -218,8 +231,10 @@ def render_backpack_2():
 
 
 def render_backpack_3():
+    # Creating a progress bar in the sidebar
     st.sidebar.progress(40)
 
+    # Displaying sections in the sidebar using a loop
     for section in sections3:
         if "<strong>" in section:
             st.sidebar.markdown(f"""
@@ -235,7 +250,8 @@ def render_backpack_3():
                         </p>
                         """, unsafe_allow_html=True)
 
-    col1, col2 = st.columns((5, 3), gap='large')
+    # Creating a layout with two columns for image of the backpack and description of the situation
+    col1, col2 = st.columns((x, y), gap='large')
     with col1:
         st.image("pictures/backpack_items_3.png")
     with col2:
@@ -264,8 +280,10 @@ def render_backpack_3():
 
 
 def render_backpack_4():
+    # Creating a progress bar in the sidebar
     st.sidebar.progress(50)
 
+    # Displaying sections in the sidebar using a loop
     for section in sections4:
         if "<strong>" in section:
             st.sidebar.markdown(f"""
@@ -281,7 +299,8 @@ def render_backpack_4():
                         </p>
                         """, unsafe_allow_html=True)
 
-    col1, col2 = st.columns((5, 3), gap='large')
+    # Creating a layout with two columns for image of the backpack and description of the situation
+    col1, col2 = st.columns((x, y), gap='large')
     with col1:
         st.image("pictures/backpack_items_4.png")
     with col2:
@@ -309,8 +328,10 @@ def render_backpack_4():
 
 
 def render_backpack_5():
+    # Creating a progress bar in the sidebar
     st.sidebar.progress(60)
 
+    # Displaying sections in the sidebar using a loop
     for section in sections5:
         if "<strong>" in section:
             st.sidebar.markdown(f"""
@@ -326,7 +347,8 @@ def render_backpack_5():
                         </p>
                         """, unsafe_allow_html=True)
 
-    col1, col2 = st.columns((5, 3), gap='large')
+    # Creating a layout with two columns for image of the backpack and description of the situation
+    col1, col2 = st.columns((x, y), gap='large')
     with col1:
         st.image("pictures/backpack_items_5.png")
     with col2:
@@ -354,8 +376,10 @@ def render_backpack_5():
 
 
 def render_backpack_6():
+    # Creating a progress bar in the sidebar
     st.sidebar.progress(70)
 
+    # Displaying sections in the sidebar using a loop
     for section in sections6:
         if "<strong>" in section:
             st.sidebar.markdown(f"""
@@ -371,7 +395,8 @@ def render_backpack_6():
                         </p>
                         """, unsafe_allow_html=True)
 
-    col1, col2 = st.columns((5, 3), gap='large')
+    # Creating a layout with two columns for image of the backpack and description of the situation
+    col1, col2 = st.columns((x, y), gap='large')
     with col1:
         st.image("pictures/backpack_items_6.png")
     with col2:
@@ -399,9 +424,10 @@ def render_backpack_6():
 
 
 def render_backpack_7():
+    # Creating a progress bar in the sidebar
     st.sidebar.progress(80)
 
-    # Use a loop to format and display the strings
+    # Displaying sections in the sidebar using a loop
     for section in sections7:
         if "<strong>" in section:
             st.sidebar.markdown(f"""
@@ -417,7 +443,8 @@ def render_backpack_7():
                     </p>
                     """, unsafe_allow_html=True)
 
-    col1, col2 = st.columns((5, 3), gap='large')
+    # Creating a layout with two columns for image of the backpack and description of the situation
+    col1, col2 = st.columns((x, y), gap='large')
     with col1:
         st.image("pictures/backpack_items_7.png")
     with col2:
@@ -445,9 +472,10 @@ def render_backpack_7():
 
 
 def render_backpack_8():
+    # Creating a progress bar in the sidebar
     st.sidebar.progress(90)
 
-    # Use a loop to format and display the strings
+    # Displaying sections in the sidebar using a loop
     for section in sections8:
         if "<strong>" in section:
             st.sidebar.markdown(
@@ -465,7 +493,8 @@ def render_backpack_8():
                 </p>
                 """, unsafe_allow_html=True)
 
-    col1, col2 = st.columns((5, 3), gap='large')
+    # Creating a layout with two columns for image of the backpack and description of the situation
+    col1, col2 = st.columns((x, y), gap='large')
     with col1:
         st.image("pictures/backpack_items_8.png")
     with col2:

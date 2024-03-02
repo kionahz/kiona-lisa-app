@@ -1,8 +1,9 @@
 import streamlit as st
 import base64
 import time
-# TODO: Formatting done -> Comments
+# TODO: Formatting & Comments
 
+# Setting up some constants for styling
 line_height_sidebar = "100%"
 line_height_sail = "130%"
 line_height_sail_title = "160%"
@@ -11,6 +12,7 @@ font_size_sidebar_current = "1.3vw"
 font_size_sail = "1.5vw"
 font_size_sail_title = "2vw"
 
+# List of sections until current page
 sections = ["Introduction",
             "Eisenhower First Try",
             "Eisenhower Method",
@@ -24,6 +26,7 @@ sections = ["Introduction",
             "<strong> Sail Away</strong>"]
 
 
+# Function to autoplay the sail away audio
 def autoplay_audio(file_path: str):
     with open(file_path, "rb") as f:
         data = f.read()
@@ -39,13 +42,15 @@ def autoplay_audio(file_path: str):
         )
 
 
+# Function to render the Sail Away page
 def render_sail_away():
+    # Creating a progress bar in the sidebar
     progress_100 = st.sidebar.progress(0)
     for percent_complete_100 in range(0, 101):
         time.sleep(0.01)
         progress_100.progress(percent_complete_100)
 
-    # Use a loop to format and display the strings
+    # Displaying sections in the sidebar using a loop
     for section in sections:
         if "<strong>" in section:
             st.sidebar.markdown(
@@ -62,10 +67,12 @@ def render_sail_away():
                 </p>
                 """, unsafe_allow_html=True)
 
+    # Getting the player's name
     player_name = st.session_state.player_name
     if player_name is not None:
         player_name = player_name.upper()
 
+    # Creating a layout with two columns for image of a ship and congratulating of player for finishing the game
     col1, col2 = st.columns((5, 3), gap="large")
     with col1:
         st.image("pictures/ship.png")
@@ -79,6 +86,7 @@ def render_sail_away():
                 You can now call yourself<br>CAPTAIN PRODUCTIVITY!!!<br><br>Sail home safely!
             </p> 
             """, unsafe_allow_html=True)
+        # Button to let balloons fly
         if st.button("Click here to celebrate!"):
             st.balloons()
         st.image("pictures/shelly_captain.png", width=300)

@@ -1,12 +1,11 @@
 import streamlit as st
-
 # TODO: Formatting & Comments
 
 
 # Function to render the introduction
 def render_introduction():
     # Creating a progress bar in the sidebar; set to no progress
-    progress_0 = st.sidebar.progress(0)
+    st.sidebar.progress(0)
 
     # Markdown to display the current page in the sidebar
     st.sidebar.markdown(

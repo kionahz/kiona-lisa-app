@@ -1,16 +1,20 @@
 import streamlit as st
+# TODO: Input!!!
 
+# Setting up some constants for styling
 line_height_sidebar = "100%"
 line_height_pomodoro = "130%"
 font_size_sidebar = "1.1vw"
 font_size_sidebar_current = "1.3vw"
 font_size_pomodoro = "1.5vw"
 font_size_pomodoro_title = "2vw"
+
+# Variables for column sizing
 x = 1
 y = 3
 z = 4
 
-# Define the list of strings
+# List of sections until current page
 sections = [
     "Introduction",
     "Eisenhower First Try",
@@ -23,15 +27,18 @@ sections = [
     "<strong>Pomodoro Method</strong>"
 ]
 
+# List of tab titles to display
 tab_titles = ["Tomatoes",
               "Pomodoro Method",
               "Did you know?"]
 
 
+# Function to render the Pomodoro Method page
 def render_pomodoro_method():
+    # Creating a progress bar in the sidebar
     st.sidebar.progress(70)
 
-    # Use a loop to format and display the strings
+    # Displaying sections in the sidebar using a loop
     for section in sections:
         if "<strong>" in section:
             st.sidebar.markdown(
@@ -48,10 +55,13 @@ def render_pomodoro_method():
                 </p>
                 """, unsafe_allow_html=True)
 
+    # Page title
     st.title("Pomodoro Technique")
 
+    # Creating tabs for the different sections
     tab1, tab2, tab3 = st.tabs(tab_titles)
 
+    # Tab 1: Introduction to Pomodoro Method with image and markdown
     with tab1:
         col1, col2, col3, col4 = st.columns((x, y, z, x))
         with col2:
@@ -69,6 +79,7 @@ def render_pomodoro_method():
                     mean the technique. Wow, all this talk about tomatoes made me hungry...
                 </p>
                 """, unsafe_allow_html=True)
+
 
     with tab2:
         col1, col2, col3, col4 = st.columns((x, y, z, x))

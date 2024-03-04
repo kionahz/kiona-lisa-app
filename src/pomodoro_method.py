@@ -80,7 +80,6 @@ def render_pomodoro_method():
                 </p>
                 """, unsafe_allow_html=True)
 
-
     with tab2:
         col1, col2, col3, col4 = st.columns((x, y, z, x))
         with col2:

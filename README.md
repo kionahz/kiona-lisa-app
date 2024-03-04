@@ -10,6 +10,8 @@ Use the package manager [pip](https://pip.pypa.io/en/stable/) to install streaml
 
 ```
 pip install streamlit
+pip install time??
+pip install base 64??
 ```
 
 ## Instructions to run our app

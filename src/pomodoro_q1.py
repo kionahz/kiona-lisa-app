@@ -1,5 +1,6 @@
 import streamlit as st
-# TODO: Formatting done -> Comments
+
+# TODO: Formatting & Comments
 
 # Setting up some constants for styling
 line_height_sidebar = "100%"
@@ -15,16 +16,15 @@ x = 2
 y = 3
 
 # List of sections until current page
-sections = [
-    "Introduction",
-    "Eisenhower First Try",
-    "Eisenhower Method",
-    "Eisenhower Applied",
-    "Pirate Encounter",
-    "Cornell Method",
-    "Blurting Method",
-    "<strong>Quest First Try</strong>"
-]
+sections = ["Introduction",
+            "Eisenhower First Try",
+            "Eisenhower Method",
+            "Eisenhower Applied",
+            "Pirate Encounter",
+            "Cornell Method",
+            "Blurting Method",
+            "<strong>Quest First Try</strong>"
+            ]
 
 
 # Function to render the first Pomodoro Quest
@@ -43,6 +43,7 @@ def render_pomodoro_q1():
                 <p style="line-height: {line_height_sidebar}; font-size: {font_size_sidebar};">{section}</p>
                 """, unsafe_allow_html=True)
 
+    # Layout with two columns with a picture of shelly, an explanation of the quest and an info box
     col_1, col_2 = st.columns((1, 4))
     with col_1:
         st.image("pictures/shelly.png")
@@ -64,9 +65,10 @@ def render_pomodoro_q1():
 
     st.divider()
 
+    # Series of columns to fit the layout
     col3, col4 = st.columns((x, y))
-
     with col3:
+        # Displaying the tasks
         st.markdown(
             f""" 
             <p style="text-align:right; font-size:{font_size_pomodoro}; line-height: {line_height_pomodoro_main};">
@@ -74,6 +76,7 @@ def render_pomodoro_q1():
             </p> 
             """, unsafe_allow_html=True)
 
+    # Displaying the time inputs for the three tasks above
     with col4:
         st.time_input('Label1', value=None, label_visibility="collapsed")
         st.time_input('Label2', value=None, label_visibility="collapsed")
@@ -81,6 +84,7 @@ def render_pomodoro_q1():
 
     col5, col6 = st.columns((x, y))
     with col5:
+        # Displaying the tasks
         st.markdown(
             f""" 
             <p style="text-align:right; font-size:{font_size_pomodoro}; line-height: {line_height_pomodoro_main};">
@@ -88,6 +92,7 @@ def render_pomodoro_q1():
             </p> 
             """, unsafe_allow_html=True)
 
+    # Displaying the time inputs for the three tasks above
     with col6:
         st.time_input('Label4', value=None, label_visibility="collapsed")
         st.time_input('Label5', value=None, label_visibility="collapsed")
@@ -95,6 +100,7 @@ def render_pomodoro_q1():
 
     col7, col8 = st.columns((x, y))
     with col7:
+        # Displaying the tasks
         st.markdown(
             f""" 
             <p style="text-align:right; font-size:{font_size_pomodoro}; line-height: {line_height_pomodoro_main};">
@@ -102,6 +108,7 @@ def render_pomodoro_q1():
             </p> 
             """, unsafe_allow_html=True)
 
+    # Displaying the time inputs for the three tasks above
     with col8:
         st.time_input('Label7', value=None, label_visibility="collapsed")
         st.time_input('Label8', value=None, label_visibility="collapsed")
@@ -109,6 +116,7 @@ def render_pomodoro_q1():
 
     col9, col10 = st.columns((x, y))
     with col9:
+        # Displaying a task
         st.markdown(
             f""" 
             <p style="text-align:right; font-size:{font_size_pomodoro}; line-height: {line_height_pomodoro_main};">
@@ -116,6 +124,7 @@ def render_pomodoro_q1():
             </p> 
             """, unsafe_allow_html=True)
 
+    # Displaying the time inputs for the task above
     with col10:
         st.time_input('Label10', value=None, label_visibility="collapsed")
 

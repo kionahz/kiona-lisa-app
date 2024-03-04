@@ -1,5 +1,6 @@
 import streamlit as st
-# TODO: Formatting done -> Comments
+
+# TODO: Formatting & Comments
 
 # Setting up some constants for styling
 line_height_sidebar = "100%"
@@ -16,19 +17,19 @@ y = 0.5
 z = 0.6
 
 #  List of sections until current page
-sections = [
-    "Introduction",
-    "Eisenhower First Try",
-    "Eisenhower Method",
-    "Eisenhower Applied",
-    "Pirate Encounter",
-    "Cornell Method",
-    "Blurting Method",
-    "Pomodoro First Try",
-    "Pomodoro Method",
-    "<strong>Pomodoro Applied</strong>"
-]
+sections = ["Introduction",
+            "Eisenhower First Try",
+            "Eisenhower Method",
+            "Eisenhower Applied",
+            "Pirate Encounter",
+            "Cornell Method",
+            "Blurting Method",
+            "Pomodoro First Try",
+            "Pomodoro Method",
+            "<strong>Pomodoro Applied</strong>"
+            ]
 
+# Session state keys for adding and removing tomatoes
 button1_add_key = "button1_add"
 button2_add_key = "button2_add"
 button3_add_key = "button3_add"
@@ -68,6 +69,7 @@ def render_pomodoro_q2():
                 <p style="line-height: {line_height_sidebar}; font-size: {font_size_sidebar};">{section}</p>
                 """, unsafe_allow_html=True)
 
+    # Layout with two columns with a picture of shelly, an explanation of the quest and an info box
     col_1, col_2 = st.columns((1, 4))
     with col_1:
         st.image("pictures/shelly.png")
@@ -84,14 +86,18 @@ def render_pomodoro_q2():
         st.info("Continue once you are finished with the button on the bottom right.", icon="❕")
 
     st.divider()
+
+    # Markdown to define the meaning of the tomato
     st.markdown(
         f""" 
         <p style="text-align: center; line-height:{line_height_pomodoro_main}; font-size: {font_size_pomodoro}; ">
             🍅  =  1  Pomodoro  =  25 minutes of focused work session  +  5 minutes break
         </p> 
         """, unsafe_allow_html=True)
+
     st.divider()
 
+    # Creating columns for the game
     col1a, col1b, col1c, col1d = st.columns((x, y, z, x))
     col2a, col2b, col2c, col2d = st.columns((x, y, z, x))
     col3a, col3b, col3c, col3d = st.columns((x, y, z, x))
@@ -103,6 +109,7 @@ def render_pomodoro_q2():
     col9a, col9b, col9c, col9d = st.columns((x, y, z, x))
     col10a, col10b, col10c, col10d = st.columns((x, y, z, x))
 
+    # Displaying the tasks
     with col1a:
         st.markdown(f"""
         <p style="text-align:{text_align_pomodoro}; font-size:{font_size_pomodoro}; line-height: {line_height_pomodoro};">Search for drinking 
@@ -150,6 +157,7 @@ def render_pomodoro_q2():
         <p style="text-align:{text_align_pomodoro}; font-size:{font_size_pomodoro}; line-height: {line_height_pomodoro}; ">Watch the Sunset</p> """,
                     unsafe_allow_html=True)
 
+    # Buttons to add tomatoes
     with col1b:
         # Initialize the tomatoes list in the session state
         if 'tomatoes1' not in st.session_state:
@@ -160,6 +168,7 @@ def render_pomodoro_q2():
             st.session_state.tomatoes1.append("🍅")
 
     with col2b:
+        # Initialize the tomatoes list in the session state
         if 'tomatoes2' not in st.session_state:
             st.session_state.tomatoes2 = []
 
@@ -177,6 +186,7 @@ def render_pomodoro_q2():
             st.session_state.tomatoes3.append("🍅")
 
     with col4b:
+        # Initialize the tomatoes list in the session state
         if 'tomatoes4' not in st.session_state:
             st.session_state.tomatoes4 = []
 
@@ -194,6 +204,7 @@ def render_pomodoro_q2():
             st.session_state.tomatoes5.append("🍅")
 
     with col6b:
+        # Initialize the tomatoes list in the session state
         if 'tomatoes6' not in st.session_state:
             st.session_state.tomatoes6 = []
 
@@ -211,6 +222,7 @@ def render_pomodoro_q2():
             st.session_state.tomatoes7.append("🍅")
 
     with col8b:
+        # Initialize the tomatoes list in the session state
         if 'tomatoes8' not in st.session_state:
             st.session_state.tomatoes8 = []
 
@@ -228,6 +240,7 @@ def render_pomodoro_q2():
             st.session_state.tomatoes9.append("🍅")
 
     with col10b:
+        # Initialize the tomatoes list in the session state
         if 'tomatoes10' not in st.session_state:
             st.session_state.tomatoes10 = []
 
@@ -235,6 +248,7 @@ def render_pomodoro_q2():
         if st.button("+ Add 🍅", button10_add_key):
             st.session_state.tomatoes10.append("🍅")
 
+    # Buttons to remove tomatoes
     with col1c:
         # Add button to remove a tomato
         if st.button("- Remove 🍅", button1_rem_key):
@@ -248,6 +262,7 @@ def render_pomodoro_q2():
                 st.session_state.tomatoes2.pop()
 
     with col3c:
+        # Add button to remove a tomato
         if st.button("- Remove 🍅", button3_rem_key):
             if st.session_state.tomatoes3:
                 st.session_state.tomatoes3.pop()
@@ -259,6 +274,7 @@ def render_pomodoro_q2():
                 st.session_state.tomatoes4.pop()
 
     with col5c:
+        # Add button to remove a tomato
         if st.button("- Remove 🍅", button5_rem_key):
             if st.session_state.tomatoes5:
                 st.session_state.tomatoes5.pop()
@@ -270,6 +286,7 @@ def render_pomodoro_q2():
                 st.session_state.tomatoes6.pop()
 
     with col7c:
+        # Add button to remove a tomato
         if st.button("- Remove 🍅", button7_rem_key):
             if st.session_state.tomatoes7:
                 st.session_state.tomatoes7.pop()
@@ -281,18 +298,20 @@ def render_pomodoro_q2():
                 st.session_state.tomatoes8.pop()
 
     with col9c:
+        # Add button to remove a tomato
         if st.button("- Remove 🍅", button9_rem_key):
             if st.session_state.tomatoes9:
                 st.session_state.tomatoes9.pop()
 
     with col10c:
         # Add button to remove a tomato
+        # Add button to remove a tomato
         if st.button("- Remove 🍅", button10_rem_key):
             if st.session_state.tomatoes10:
                 st.session_state.tomatoes10.pop()
 
+    # Displaying the tomato emojis
     with col1d:
-        # Display the tomato emojis
         st.text(" ".join(st.session_state.tomatoes1))
     with col2d:
         st.text(" ".join(st.session_state.tomatoes2))

@@ -1,5 +1,5 @@
 import streamlit as st
-# TODO: DONE with Formatting and Comments
+
 
 # change background color of the sidebar
 def sidebar_color():

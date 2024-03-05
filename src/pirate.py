@@ -1,6 +1,6 @@
 import streamlit as st
 import base64
-# TODO: Formatting & Comments
+
 
 # Setting up some constants for styling
 line_height_sidebar = "100%"
@@ -73,6 +73,7 @@ def autoplay_audio(file_path: str):
             unsafe_allow_html=True,
         )
 
+
 # Funktion to render the pirate encounter page
 def render_pirate():
     # Creating a progress bar in the sidebar
@@ -82,11 +83,15 @@ def render_pirate():
     for section in sections:
         if "<strong>" in section:
             st.sidebar.markdown(f"""
-                        <p style="line-height: {line_height_sidebar}; font-size: {font_size_sidebar_current};">{section}</p>
+                        <p style="line-height: {line_height_sidebar}; font-size: {font_size_sidebar_current};">
+                            {section}
+                        </p>
                         """, unsafe_allow_html=True)
         else:
             st.sidebar.markdown(f"""
-                        <p style="line-height: {line_height_sidebar}; font-size: {font_size_sidebar};">{section}</p>
+                        <p style="line-height: {line_height_sidebar}; font-size: {font_size_sidebar};">
+                            {section}
+                        </p>
                         """, unsafe_allow_html=True)
 
     # Creating three tabs for the pirate story

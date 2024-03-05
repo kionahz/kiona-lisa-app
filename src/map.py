@@ -1,6 +1,6 @@
 import streamlit as st
 import time
-# TODO: Formatting & Comments
+
 
 # Setting up some constants for styling
 line_height_sidebar = "100%"

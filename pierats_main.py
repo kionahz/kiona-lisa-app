@@ -73,7 +73,6 @@ with col2:
     )
 
 
-
 # if player has provided an input, clear the welcome page widgets and set start to true to start the game
 if st.session_state.player_name != "":
     welcome.empty()

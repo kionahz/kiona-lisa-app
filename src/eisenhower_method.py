@@ -1,5 +1,5 @@
 import streamlit as st
-# TODO: Formatting & Comments
+
 
 # Setting up some constants for styling
 line_height_sidebar = "100%"

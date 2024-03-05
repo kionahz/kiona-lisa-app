@@ -1,5 +1,5 @@
 import streamlit as st
-# TODO: Formatting & Comments
+
 
 # Setting up some constants for styling
 line_height_sidebar = "100%"
@@ -358,8 +358,8 @@ def render_backpack_5():
             Extraordinary!
             </p>
             <p style="line-height:{line_height_backpack}; font-size: {font_size_backpack};">
-                You collected the fifth item in your backpack. It's white, it's soft, it's... fabric! You can use it to fix 
-                your sails.<br><br>Wow! You are really becoming a pro.
+                You collected the fifth item in your backpack. It's white, it's soft, it's... fabric! You can use it to 
+                fix your sails.<br><br>Wow! You are really becoming a pro.
             </p>
             """, unsafe_allow_html=True
         )

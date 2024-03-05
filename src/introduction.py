@@ -1,5 +1,4 @@
 import streamlit as st
-# TODO: Formatting & Comments
 
 
 # Function to render the introduction

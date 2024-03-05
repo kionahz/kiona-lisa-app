@@ -1,5 +1,5 @@
 import streamlit as st
-# TODO: Input!!!
+
 
 # Setting up some constants for styling
 line_height_sidebar = "100%"
@@ -139,7 +139,7 @@ def render_pomodoro_method():
         col1, col2, col3, col4 = st.columns((x, y, z, x))
         with col2:
             # https://www.gutekueche.at/spaghetti-al-pomodoro-rezept-32917
-            st.image("pictures/spaghetti-al-pomodoro.png")
+            st.image("pictures/spaghetti_al_pomodoro.png")
             st.markdown(
                 f"""
                <p style="line-height:{line_height}; font-size: {font_size_text};">
@@ -199,8 +199,8 @@ def render_pomodoro_method():
                         the basil, shake dry and chop finely.<br><br>
                         Season the tomato sauce again with salt and pepper, add the basil and thyme and briefly bring to 
                         a boil.<br><br>
-                        Finally, drain the spaghetti, remove the twigs of thyme from the sauce and mix the spaghetti with 
-                        the sauce - serve sprinkled with parmesan if you like.<br>
+                        Finally, drain the spaghetti, remove the twigs of thyme from the sauce and mix the spaghetti 
+                        with the sauce - serve sprinkled with parmesan if you like.<br>
                     </p>
                     """, unsafe_allow_html=True)
 

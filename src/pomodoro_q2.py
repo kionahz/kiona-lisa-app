@@ -1,6 +1,5 @@
 import streamlit as st
 
-# TODO: Formatting & Comments
 
 # Setting up some constants for styling
 line_height_sidebar = "100%"
@@ -79,7 +78,7 @@ def render_pomodoro_q2():
             f""" 
             <p style="line-height:{line_height_pomodoro_main}; font-size: {font_size_pomodoro};">
                 Now you learned everything about the Pomodoro Method. Shall we have another look at the time management 
-                of your tasks? Let's try to break down your tasks in pomodori.<br>For example I would choose one 
+                of your tasks? Let's try to break down your tasks in Pomodori.<br>For example I would choose one 
                 Pomodoro for the time I need for cleaning my shell. 
             </p>
             """, unsafe_allow_html=True)
@@ -111,51 +110,88 @@ def render_pomodoro_q2():
 
     # Displaying the tasks
     with col1a:
-        st.markdown(f"""
-        <p style="text-align:{text_align_pomodoro}; font-size:{font_size_pomodoro}; line-height: {line_height_pomodoro};">Search for drinking 
-        water</p> """,
-                    unsafe_allow_html=True)
+        st.markdown(
+            f"""
+            <p style="text-align:{text_align_pomodoro}; font-size:{font_size_pomodoro}; 
+            line-height: {line_height_pomodoro};">
+                Search for drinking water
+            </p> 
+            """, unsafe_allow_html=True)
     with col2a:
-        st.markdown(f"""
-        <p style="text-align:{text_align_pomodoro}; font-size:{font_size_pomodoro}; line-height: {line_height_pomodoro};">Build 
-            a Shelter</p> """,
-                    unsafe_allow_html=True)
+        st.markdown(
+            f"""
+            <p style="text-align:{text_align_pomodoro}; font-size:{font_size_pomodoro}; 
+            line-height: {line_height_pomodoro};">
+                Build a Shelter
+            </p> 
+            """, unsafe_allow_html=True)
     with col3a:
-        st.markdown(f"""
-        <p style="text-align:{text_align_pomodoro}; font-size:{font_size_pomodoro}; line-height: {line_height_pomodoro};">Serach for food</p> """,
-                    unsafe_allow_html=True)
+        st.markdown(
+            f"""
+            <p style="text-align:{text_align_pomodoro}; font-size:{font_size_pomodoro}; 
+            line-height: {line_height_pomodoro};">
+                Search for food
+            </p> 
+            """, unsafe_allow_html=True)
     with col4a:
-        st.markdown(f"""
-        <p style="text-align:{text_align_pomodoro}; font-size:{font_size_pomodoro}; line-height: {line_height_pomodoro};">Collect Wood</p> """,
-                    unsafe_allow_html=True)
+        st.markdown(
+            f"""
+            <p style="text-align:{text_align_pomodoro}; font-size:{font_size_pomodoro}; 
+            line-height: {line_height_pomodoro};">
+                Collect Wood 
+            </p> 
+            """, unsafe_allow_html=True)
     with col5a:
-        st.markdown(f"""
-        <p style="text-align:{text_align_pomodoro}; font-size:{font_size_pomodoro}; line-height: {line_height_pomodoro};">Build a fire</p> """,
-                    unsafe_allow_html=True)
+        st.markdown(
+            f"""
+            <p style="text-align:{text_align_pomodoro}; font-size:{font_size_pomodoro}; 
+            line-height: {line_height_pomodoro};">
+                Build a fire
+            </p> 
+            """, unsafe_allow_html=True)
     with col6a:
-        st.markdown(f"""
-        <p style="text-align:{text_align_pomodoro}; font-size:{font_size_pomodoro}; line-height: {line_height_pomodoro};">Search for a container 
-        (for water or food)</p> """,
-                    unsafe_allow_html=True)
+        st.markdown(
+            f"""
+            <p style="text-align:{text_align_pomodoro}; font-size:{font_size_pomodoro}; 
+            line-height: {line_height_pomodoro};">
+                Search for a container (for water or food)
+            </p> 
+            """, unsafe_allow_html=True)
 
     with col7a:
-        st.markdown(f"""
-        <p style="text-align:{text_align_pomodoro}; font-size:{font_size_pomodoro}; line-height: {line_height_pomodoro};">Build a weapon</p> """,
-                    unsafe_allow_html=True)
+        st.markdown(
+            f"""
+            <p style="text-align:{text_align_pomodoro}; font-size:{font_size_pomodoro}; 
+            line-height: {line_height_pomodoro};">
+                Build a weapon
+            </p> 
+            """,  unsafe_allow_html=True)
     with col8a:
-        st.markdown(f"""
-        <p style="text-align:{text_align_pomodoro}; font-size:{font_size_pomodoro}; line-height: {line_height_pomodoro};">Explore the 
-        surroundings</p> """,
-                    unsafe_allow_html=True)
+        st.markdown(
+            f"""
+            <p style="text-align:{text_align_pomodoro}; font-size:{font_size_pomodoro}; 
+            line-height: {line_height_pomodoro};">
+                Explore the 
+            surroundings
+            </p> 
+            """, unsafe_allow_html=True)
 
     with col9a:
-        st.markdown(f"""
-        <p style="text-align:{text_align_pomodoro}; font-size:{font_size_pomodoro}; line-height: {line_height_pomodoro};">Collect Shells</p> """,
-                    unsafe_allow_html=True)
+        st.markdown(
+            f"""
+            <p style="text-align:{text_align_pomodoro}; font-size:{font_size_pomodoro}; 
+            line-height: {line_height_pomodoro};">
+                Collect Shells
+            </p> 
+            """, unsafe_allow_html=True)
     with col10a:
-        st.markdown(f"""
-        <p style="text-align:{text_align_pomodoro}; font-size:{font_size_pomodoro}; line-height: {line_height_pomodoro}; ">Watch the Sunset</p> """,
-                    unsafe_allow_html=True)
+        st.markdown(
+            f"""
+            <p style="text-align:{text_align_pomodoro}; font-size:{font_size_pomodoro}; 
+            line-height: {line_height_pomodoro}; ">
+                Watch the Sunset
+            </p> 
+            """, unsafe_allow_html=True)
 
     # Buttons to add tomatoes
     with col1b:

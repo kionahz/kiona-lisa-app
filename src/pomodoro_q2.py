@@ -79,7 +79,7 @@ def render_pomodoro_q2():
             f""" 
             <p style="line-height:{line_height_pomodoro_main}; font-size: {font_size_pomodoro};">
                 Now you learned everything about the Pomodoro Method. Shall we have another look at the time management 
-                of your tasks? Let's try to break down your tasks in pomodoros.<br>For example I would choose one 
+                of your tasks? Let's try to break down your tasks in pomodori.<br>For example I would choose one 
                 Pomodoro for the time I need for cleaning my shell. 
             </p>
             """, unsafe_allow_html=True)

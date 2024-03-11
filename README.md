@@ -4,6 +4,7 @@ This repository contains the code for the App Development Exam for the winter te
 ## Description
 The App is called PIERATS - Productivity Island Expedition.
 We hope you have fun playing it!
+You can access our deployed app via this link https://pierats.streamlit.app/
 
 ## Installation
 Use the package manager [pip](https://pip.pypa.io/en/stable/) to install streamlit.

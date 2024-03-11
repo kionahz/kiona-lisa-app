@@ -3,6 +3,30 @@ import base64
 import time
 
 
+# Setting up some constants for styling
+line_height_sidebar = "100%"
+line_height_sail = "130%"
+line_height_sail_title = "160%"
+font_size_sidebar = "1.1vw"
+font_size_sidebar_current = "1.3vw"
+font_size_sail = "1.5vw"
+font_size_sail_title = "2vw"
+
+# List of sections until current page
+sections = ["Introduction",
+            "Eisenhower First Try",
+            "Eisenhower Method",
+            "Eisenhower Applied",
+            "Pirate Encounter",
+            "Cornell Method",
+            "Blurting Method",
+            "Pomodoro First Try",
+            "Pomodoro Method",
+            "Pomodoro Applied",
+            "<strong> Sail Away</strong>"]
+
+
+# Function to autoplay the sail away audio
 def autoplay_audio(file_path: str):
     with open(file_path, "rb") as f:
         data = f.read()
@@ -18,45 +42,62 @@ def autoplay_audio(file_path: str):
         )
 
 
+# Function to render the Sail Away page
 def render_sail_away():
+    # Creating a progress bar in the sidebar
     progress_100 = st.sidebar.progress(0)
     for percent_complete_100 in range(0, 101):
         time.sleep(0.01)
         progress_100.progress(percent_complete_100)
 
-    st.sidebar.markdown(f"""
-    <p style="line-height: 100%; font-size: 1.1vw;">Introduction</p>
-    <p style="line-height: 100%; font-size: 1.1vw;">Eisenhower First Try</p>
-    <p style="line-height: 100%; font-size: 1.1vw;">Eisenhower Method</p>
-    <p style="line-height: 100%; font-size: 1.1vw;">Eisenhower Applied</p>
-    <p style="line-height: 100%; font-size: 1.1vw;">Cornell Method</p>
-    <p style="line-height: 100%; font-size: 1.1vw;">Blurting Method</p>
-    <p style="line-height: 100%; font-size: 1.1vw;">Pomodoro First Try</p>
-    <p style="line-height: 100%; font-size: 1.1vw;">Pomodoro Method</p>
-    <p style="line-height: 100%; font-size: 1.1vw;">Pomodoro Applied</p>
-    <p style="line-height: 100%; font-size: 1.3vw;"><strong>Sail Away</strong></p>
-    """, unsafe_allow_html=True)
+    # Displaying sections in the sidebar using a loop
+    for section in sections:
+        if "<strong>" in section:
+            st.sidebar.markdown(
+                f"""
+                <p style="line-height: {line_height_sidebar}; font-size: {font_size_sidebar_current};">
+                    {section}
+                </p>
+                """, unsafe_allow_html=True)
+        else:
+            st.sidebar.markdown(
+                f"""
+                <p style="line-height: {line_height_sidebar}; font-size: {font_size_sidebar};">
+                    {section}
+                </p>
+                """, unsafe_allow_html=True)
 
+    # Getting the player's name
     player_name = st.session_state.player_name
     if player_name is not None:
         player_name = player_name.upper()
 
+    # Creating a layout with two columns for image of a ship and congratulating of player for finishing the game
     col1, col2 = st.columns((5, 3), gap="large")
     with col1:
         st.image("pictures/ship.png")
     with col2:
         st.markdown(
-            f"""<p style="line-height:160%; font-size: 2vw; color: white">WELL DONE {player_name}!</p> <p 
-            style="line-height:130%; font-size: 1.5vw; color: white">You can now call yourself<br>CAPTAIN 
-            PRODUCTIVITY!!!<br><br>Sail home safely!</p> """, unsafe_allow_html=True)
+            f"""
+            <p style="line-height:{line_height_sail_title}; font-size: {font_size_sail_title};">
+                WELL DONE {player_name}!
+            </p> 
+            <p style="line-height:{line_height_sail}; font-size: {font_size_sail};">
+                You can now call yourself<br>CAPTAIN PRODUCTIVITY!!!<br><br>Sail home safely!
+            </p> 
+            """, unsafe_allow_html=True)
+        # Button to let balloons fly
         if st.button("Click here to celebrate!"):
             st.balloons()
         st.image("pictures/shelly_captain.png", width=300)
 
-    cola, colb = st.columns((8, 1))
-    with cola:
+    # Layout with two columns
+    col_a, col_b = st.columns((8, 1))
+    with col_a:
         autoplay_audio("audio/Orinoco-Flow.mp3")
-    with colb:
+    with col_b:
+        # https://docs.streamlit.io/library/api-reference/control-flow/st.rerun
+        # Rerunning the app when the button is clicked to restart or exit the game
         if st.button("Start again"):
             st.session_state.place = "introduction"
             st.rerun()
